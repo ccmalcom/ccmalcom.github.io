@@ -1,0 +1,45 @@
+/* Typewriter Effect */
+.var-highlight{
+	color: lightblue;
+}
+.string-highlight{
+	color: rgba(253, 149, 90, 0.8);
+}
+
+#typewriter{
+        padding-top: 20%;
+		font-size: 2em;
+		margin: 0;
+		font-family: "Courier New";
+        color: honeydew;
+}
+
+#typewriter:after{
+        content: "|";
+        animation: blink 500ms linear infinite alternate;
+    }
+    
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+header{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(53, 53, 53);
+}
+
+html{
+    overflow-x: hidden;
+}
