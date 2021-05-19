@@ -332,7 +332,7 @@ nav img{
 		margin-right: auto;
 		font-weight: 500;
 		font-size: 20px;
-		letter-spacing: .8em;
+		letter-spacing: 1px;
 	}
 	#leftRightForm{
 		display: flex;
@@ -354,6 +354,7 @@ nav img{
 #contactHeadings p{
 	width: 80%;
 	color: white;
+	letter-spacing: 1px;
 }
 #leftRightForm{
 	display: flex;
