@@ -55,13 +55,14 @@ header{
 	/* padding: 10% 0 10% 0; */
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1024px){
 	#typewriter{
 		font-size: 1em;
 		transition: 1s;
 		margin-left: 0;
+		left: -50px;
 	}
-
+	
 	header{
 		height: 40vh;
 		transition: 1s
@@ -167,7 +168,7 @@ nav img{
 
 #aboutTxt{
 	margin: 20px;
-	max-height: 70vh;
+	max-height: auto;
 	/* overflow-y: auto; */
 	width: 30vw;
 	text-align: center;
@@ -198,7 +199,7 @@ nav img{
 		max-width: 325px;
 	}
 	#aboutTxt{
-		width: 75vw;
+		width: 80vw;
 	}
 }
 
@@ -224,11 +225,12 @@ nav img{
 	object-fit: contain;
 }
 
-/*
+
 .card{
 	max-width: 500px;
+	max-height: 200px;
 	min-height: 400px;
-} */
+}
 
 /* CONTACT */
 #contact{
