@@ -14,7 +14,7 @@
 		font-size: 2em;
 		/* margin: 0 auto; */
 		font-family: "Courier New";
-        color: #1ec0c5;
+        color: white;
 		height: 100%;
 }
 
@@ -40,7 +40,7 @@ html{
 
 
 body{
-	background-color: #16BAC5
+	background-color: white
 	;
 }
 
@@ -144,11 +144,11 @@ nav img{
 
 #aboutMe h1{
 	text-align: center;
-	color: white;
+	color: black;
 	margin:0 auto 3% auto;	
 	width: fit-content;
 	/* border-bottom: 3px solid #F7344F; */
-	text-shadow: 5px 5px 3px rgb(104, 104, 104);
+	text-shadow: 5px 5px 3px #E6FF00;
 }
 
 
@@ -209,7 +209,7 @@ nav img{
 	width: 30vw;
 	text-align: center;
 	letter-spacing: .8px;
-	color: #ffffff;
+	color: black;
 	font-weight: 500;
 }
 
@@ -221,11 +221,11 @@ nav img{
 }
 
 #externalLinks .fab{
-	color: #E6FF00;
+	color: #eeff00;
 }
 
 #externalLinks .fab:hover{
-	color: #ffffff;
+	color: black;
 	transition: 200ms;
 }
 
