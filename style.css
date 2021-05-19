@@ -1,9 +1,10 @@
 /* Typewriter Effect */
 .var-highlight{
-	color: #bdd5ec;
+	color: #F7344F
+	;
 }
 .string-highlight{
-	color: rgba(247, 165, 120, 1);
+	color: #E6FF00;
 }
 
 #typewriter{
@@ -13,7 +14,7 @@
 		font-size: 2em;
 		/* margin: 0 auto; */
 		font-family: "Courier New";
-        color: white;
+        color: #1ec0c5;
 		height: 100%;
 }
 
@@ -37,21 +38,24 @@ html{
 	font-family: 'poppins', sans-serif;
 }
 
+
 body{
-	background-color: #DFE7EF;
+	background-color: #16BAC5
+	;
 }
 
 body h1{
 	font-family: 'Recursive', sans-serif;
-	color: rgba(247, 165, 120, 1);
+	;
 	font-weight: 700;
+	font-size: 56px;
 }
 
 /* NAV/HEADER */
 header{
 	height: 80vh;
     width: 100vw;
-    background-color: #545454;
+    background-color: rgb(50, 50, 50);
 	/* padding: 10% 0 10% 0; */
 }
 
@@ -70,8 +74,9 @@ header{
 }
 
 .bg-color{
-	background-color: rgba(247, 165, 120, .95);
+	background-color:#F7344F;
 }
+
 nav img{
 	width: 50px;
 	height: auto;
@@ -85,6 +90,32 @@ nav img{
 }
 .nav-link{
 	color: white;
+	font-family: 'poppins', sans-serif;
+	letter-spacing: 2px;
+}
+.navbar-brand{
+	color: white;
+	font-family: 'poppins', sans-serif;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+
+.nav-link i{
+	color: #E6FF00;
+}
+
+.navbar{
+	padding: .5% 5%;
+}
+#contactLink{
+	border: 1px solid #E6FF00
+}
+
+#contactLink:hover{
+	background-color: #E6FF00;
+	color: #F7344F;
+	transition: 200ms;
 }
 
 .container{
@@ -93,7 +124,7 @@ nav img{
 }
 
 .nav-link:hover{
-	color: #545454;
+	color: #E6FF00;
 }
 
 @media screen and (max-width: 545px){
@@ -113,6 +144,11 @@ nav img{
 
 #aboutMe h1{
 	text-align: center;
+	color: white;
+	margin:0 auto 3% auto;	
+	width: fit-content;
+	/* border-bottom: 3px solid #F7344F; */
+	text-shadow: 5px 5px 3px rgb(104, 104, 104);
 }
 
 
@@ -129,7 +165,7 @@ nav img{
 
 
 #aboutMe img{
-	max-height: 400px;
+	max-height: px;
 	min-height: 40px;
 	max-width: 500px;
 	min-width: 50px;
@@ -173,6 +209,8 @@ nav img{
 	width: 30vw;
 	text-align: center;
 	letter-spacing: .8px;
+	color: #ffffff;
+	font-weight: 500;
 }
 
 #externalLinks{
@@ -183,7 +221,7 @@ nav img{
 }
 
 #externalLinks .fab{
-	color: rgba(247, 165, 120, 1);
+	color: #E6FF00;
 }
 
 #externalLinks .fab:hover{
@@ -207,12 +245,19 @@ nav img{
 #projects{
 	width: 100vw;
 	margin: auto;
-	background-color: black;
-	padding: 10%;
+	background-color: black
+	;
+	padding: 5% 10%;
 }
 
 #projects h1{
-	margin-bottom: 20px;
+	margin-bottom: 5%;
+	color: #F7344F;
+	width: fit-content;
+	border-bottom: 5px solid #E6FF00;
+	border-right: 5px solid #E6FF00;
+	padding-bottom: 12px;
+	padding-right: 17px;
 }
 
 #cat{
@@ -233,20 +278,50 @@ nav img{
 
 /* CONTACT */
 #contact{
+	background-color: #F7344F;
 	width: 70vw;
-	margin: 20px auto;
-	min-height: 50vh;
-	max-height: auto;
+	height: auto;
+	width: auto;
+	margin: 0;
+	padding: 5% 15%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
 }
 
+#contact h1{
+	color: #E6FF00;
+}
+
+#sendButton{
+	margin: 10px;
+	background-color: #F7344F;
+	color: white;
+	border: transparent;
+	width: 520px;
+	height: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+#sendButton:hover{
+	border: 1px solid white;
+	transition: 200ms;
+}
+#form{
+	border: 15px solid black;
+	background-color: black;
+	box-shadow: #E6FF00 40px 40px;
+	margin-bottom: 4%;
+}
 @media screen and (max-width: 992px){
 	#contact{
 		flex-direction: column;
 		align-items: center;
+		height: fit-content;
+		padding-bottom: 10%;
 	}
 	#contactHeadings{
 		text-align: center;
@@ -255,8 +330,10 @@ nav img{
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
+		font-weight: 500;
+		font-size: 20px;
+		letter-spacing: .8em;
 	}
-	/* ! this is not working */
 	#leftRightForm{
 		display: flex;
 		flex-direction: column;
@@ -265,13 +342,18 @@ nav img{
 		max-height: 50px;
 		max-width: 250px;
 	}
-	#contact{
-		margin: 20px auto;
+	#sendButton{
+		width: 250px;
+	}
+	#form{
+		margin-right: 15%;
+		margin-bottom: 15%;
 	}
 }
 
 #contactHeadings p{
 	width: 80%;
+	color: white;
 }
 #leftRightForm{
 	display: flex;
@@ -282,10 +364,7 @@ nav img{
 	width: 250px;
 }
 
-#form{
-	border: 6px outset #ffffff;
-	background-color: rgba(247, 165, 120, 1);
-}
+
 
 #message{
 	height: 100px;
@@ -304,36 +383,32 @@ nav img{
 	justify-content: center;
 }
 
-#sendButton{
-	margin: 10px;
-	background-color: #545454;
-	color: white;
-}
+
 
 /* FOOTER */
 #footer{
-	background-color: #545454;
+	background-color: rgb(50, 50, 50);
 	height: fit-content;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	color: #DFE7EF;
+	color: white;
 	text-align: center;
 }
 
 #footerLinks{
-	margin: 30px auto;
-	width: 300px;
+	margin: 25px auto;
+	width: 250px;
 	display: flex;
 	justify-content: space-evenly;
 }
 
 #footer .fab{
-	color: #DFE7EF;
+	color: white;
 }
 
 #footer .fab:hover{
-	color: rgba(247, 165, 120, 1);
+	color: #E6FF00;
 	transition: 200ms;
 }
 
