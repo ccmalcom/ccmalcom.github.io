@@ -221,14 +221,13 @@ nav img{
 }
 #projects img{
 	max-height: 300px;
-	min-height: 200px;
-	object-fit: contain;
+	min-height: 300px;
+	object-fit: cover;
 }
-
 
 .card{
 	max-width: 500px;
-	max-height: 200px;
+	max-height: fit-content;
 	min-height: 400px;
 }
 
