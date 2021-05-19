@@ -1,45 +1,338 @@
 /* Typewriter Effect */
 .var-highlight{
-	color: lightblue;
+	color: #bdd5ec;
 }
 .string-highlight{
-	color: rgba(253, 149, 90, 0.8);
+	color: rgba(247, 165, 120, 1);
 }
 
 #typewriter{
-        padding-top: 20%;
+        /* padding: 10% 0; */
+		position: relative;
+		top: 20%;
 		font-size: 2em;
-		margin: 0;
+		/* margin: 0 auto; */
 		font-family: "Courier New";
-        color: honeydew;
+        color: white;
+		height: 100%;
 }
+
+
 
 #typewriter:after{
         content: "|";
         animation: blink 500ms linear infinite alternate;
     }
     
-@-webkit-keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
-
-@-moz-keyframes blink{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
-
 @keyframes blink{
 	0%{opacity: 0;}
 	100%{opacity: 1;}
 }
 
-header{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(53, 53, 53);
-}
+
+/* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea */
 
 html{
-    overflow-x: hidden;
+	overflow-x: hidden;
+	font-family: 'poppins', sans-serif;
 }
+
+body{
+	background-color: #DFE7EF;
+}
+
+body h1{
+	font-family: 'Recursive', sans-serif;
+	color: rgba(247, 165, 120, 1);
+	font-weight: 700;
+}
+
+/* NAV/HEADER */
+header{
+	height: 80vh;
+    width: 100vw;
+    background-color: #545454;
+	/* padding: 10% 0 10% 0; */
+}
+
+@media screen and (max-width: 767px){
+	#typewriter{
+		font-size: 1em;
+		transition: 1s;
+		margin-left: 0;
+	}
+
+	header{
+		height: 40vh;
+		transition: 1s
+	}
+}
+
+.bg-color{
+	background-color: rgba(247, 165, 120, .95);
+}
+nav img{
+	width: 50px;
+	height: auto;
+	margin-right: 15px;
+}
+.navbar-brand{
+	font-size: 32px;
+	display: flex;
+	align-items: center;
+	
+}
+.nav-link{
+	color: white;
+}
+
+.container{
+	width: fit-content;
+	margin-left: 0;
+}
+
+.nav-link:hover{
+	color: #545454;
+}
+
+@media screen and (max-width: 545px){
+	.nav{
+		justify-content: start !important;
+	}
+}
+	
+/* ABOUT */
+#aboutMe{
+	min-height: 80vh;
+	max-height: auto;
+	width: 100vw;
+	margin: auto;
+	padding: 5% 10%;
+}
+
+#aboutMe h1{
+	text-align: center;
+}
+
+
+/* #aboutMe img{
+	height: 400px;
+	width: 500px;
+	border-radius: 50%;
+}
+
+#aboutMe img:hover{
+	border-radius: 0;
+	transition: 200ms;
+} */
+
+
+#aboutMe img{
+	max-height: 400px;
+	min-height: 40px;
+	max-width: 500px;
+	min-width: 50px;
+	border-radius: 50%;
+	margin: 20px 0;
+}
+
+#aboutMe img:hover{
+	animation-name: imageAnimation;
+	animation-duration: 6s;
+	animation-iteration-count: 1;
+
+}
+
+@keyframes imageAnimation{
+	0%,
+	20%,
+	40%,
+	60%,
+	80%,
+	100% {
+		border-radius: 50%;
+	}
+	20% {border-radius: 0%}
+}
+
+#aboutContent{
+	font-family: 'poppins', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: auto;
+	width: auto;
+	padding-top: 30px;
+}
+
+#aboutTxt{
+	margin: 20px;
+	max-height: 70vh;
+	/* overflow-y: auto; */
+	width: 30vw;
+	text-align: center;
+	letter-spacing: .8px;
+}
+
+#externalLinks{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#externalLinks .fab{
+	color: rgba(247, 165, 120, 1);
+}
+
+#externalLinks .fab:hover{
+	color: #ffffff;
+	transition: 200ms;
+}
+
+@media screen and (max-width: 992px){
+	#aboutContent{
+		flex-direction: column;
+	}
+	#aboutMe img{
+		max-width: 325px;
+	}
+	#aboutTxt{
+		width: 75vw;
+	}
+}
+
+/* PROJECTS */
+#projects{
+	width: 100vw;
+	margin: auto;
+	background-color: black;
+	padding: 10%;
+}
+
+#projects h1{
+	margin-bottom: 20px;
+}
+
+#cat{
+	height: 300px;
+	object-fit: cover !important;
+}
+#projects img{
+	max-height: 300px;
+	min-height: 200px;
+	object-fit: contain;
+}
+
+/*
+.card{
+	max-width: 500px;
+	min-height: 400px;
+} */
+
+/* CONTACT */
+#contact{
+	width: 70vw;
+	margin: 20px auto;
+	min-height: 50vh;
+	max-height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+@media screen and (max-width: 992px){
+	#contact{
+		flex-direction: column;
+		align-items: center;
+	}
+	#contactHeadings{
+		text-align: center;
+	}
+	#contactHeadings p{
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/* ! this is not working */
+	#leftRightForm{
+		display: flex;
+		flex-direction: column;
+	}
+	#message{
+		max-height: 50px;
+		max-width: 250px;
+	}
+	#contact{
+		margin: 20px auto;
+	}
+}
+
+#contactHeadings p{
+	width: 80%;
+}
+#leftRightForm{
+	display: flex;
+	justify-content: center;
+	width: auto;
+}
+#leftRightForm input{
+	width: 250px;
+}
+
+#form{
+	border: 6px outset #ffffff;
+	background-color: rgba(247, 165, 120, 1);
+}
+
+#message{
+	height: 100px;
+	width: 520px;
+}
+#messageDiv{
+	display: flex;
+}
+
+#name, #email, #phoneNumber, #subject, #message{
+	margin: 10px;
+	border-color: white;
+}
+#button{
+	display: flex;
+	justify-content: center;
+}
+
+#sendButton{
+	margin: 10px;
+	background-color: #545454;
+	color: white;
+}
+
+/* FOOTER */
+#footer{
+	background-color: #545454;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	color: #DFE7EF;
+	text-align: center;
+}
+
+#footerLinks{
+	margin: 30px auto;
+	width: 300px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#footer .fab{
+	color: #DFE7EF;
+}
+
+#footer .fab:hover{
+	color: rgba(247, 165, 120, 1);
+	transition: 200ms;
+}
+

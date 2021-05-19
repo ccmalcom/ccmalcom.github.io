@@ -7,7 +7,7 @@ function setupTypewriter(t) {
         tag = "",
         writingTag = false,
         tagOpen = false,
-        typeSpeed = 100,
+        typeSpeed = 15,
     tempTypeSpeed = 0;
 
     var type = function() {
@@ -68,3 +68,5 @@ var typer = document.getElementById('typewriter');
 typewriter = setupTypewriter(typewriter);
 
 typewriter.type();
+
+//* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea

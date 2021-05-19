@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Recursive:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,123 +16,199 @@
 
 <body>
     <!-- navbar -->
-    <nav>
+    <nav class="navbar sticky-top navbar-dark bg-color nav justify-content-end">
+        <div class="container" >
+            <a href="#" class="navbar-brand">
+                <img src="assets/web-logo.png" alt="" class="d-inline-block align-text-top">
+                CCMedia
+            </a>
+        </div>
         <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Active</a>
+            <li class ="nav-item">
+                <a class="nav-link" href="#header">Top</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#aboutMe">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
         </ul>
-
     </nav>
     <!-- landing -->
     <header id="header">
         <pre id="typewriter">
-            1   <span class="var-highlight">let</span> coder = {
-            2       name: <span class="string-highlight">'Chase Malcom'</span>,
-            3       type: <span class="string-highlight">'Web Devloper'</span>,
-            4       location: <span class="string-highlight">'Indiana'</span>,
-            5       readyToWork:<span class="string-highlight"> true</span>
-            6   }; </pre>
+        1   <span class="var-highlight">let</span> coder = {
+        2       name: <span class="string-highlight">'Chase Malcom'</span>,
+        3       type: <span class="string-highlight">'Web Developer'</span>,
+        4       location: <span class="string-highlight">'Indianapolis, Indiana'</span>,
+        5       items:<span class="string-highlight"> ['coffee', 'laptop', 'headphones']</span>
+        6       readyToWork:<span class="string-highlight"> true</span>
+        7   }; </pre>
+            <!-- Thank you https://codepen.io/stevn/pen/jEZvXa for the idea -->
 
     </header>
     <!-- About Me -->
     <section id='aboutMe'>
         <h1>About Me</h1>
+        <div id="aboutContent">
+            <div id='aboutImg'>
+                <img src="assets/me.jpg" alt="">
+            </div>
+            <div id="aboutTxt">
+                <p>I was born and raised in a small town right next to Indianapolis. While I am currently a web
+                    developer, I
+                    originally started my professional career as a band teacher. While I still have a deep love for both
+                    music
+                    and teaching, web development is a career that I both excel at and enjoy.</p>
 
-        <img src="assets/me.jpg" alt="">
-
-        <p>I was born and raised in a small town right next to Indianapolis. While I am currently a web developer, I
-            originally started my professional career as a band teacher. While I still have a deep love for both music
-            and teaching, web development is a career that I both excel at and enjoy.</p>
-
-        <p>I recived my education through a web development bootcamp at the Eleven Fifty Academy in Indianapolis, IN.
-            Combined with my Bachelors of Music Education from Ball State University, I was able to gain both the hard
-            skills for coding as well as being able to communicate with, relate to, and serve my clients as well as my
-            community.</p>
+                <p>I recived my education through a web development bootcamp at the Eleven Fifty Academy in
+                    Indianapolis, IN.
+                    Combined with my Bachelors of Music Education from Ball State University, I was able to gain both
+                    the hard
+                    skills for coding as well as being able to communicate with, relate to, and serve my clients as well
+                    as my
+                    community.</p>
+                    <div id='externalLinks'>
+                    <a href="https://github.com/ccmalcom"  style="text-decoration: none;"><i
+                        class="fab fa-github fa-5x" target='_blank'></i></a>
+                <a href="https://www.linkedin.com/in/chase-malcom-674b525a/" target="_blank" ><i
+                        class="fab fa-linkedin fa-5x"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Projects -->
     <section id="projects">
         <h1>Projects</h1>
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <a href="https://codepen.io/ccmalcom/pen/wvgZeoN" target="_blank">
-                        <img src="assets/CSSCreaturepng.png" class="card-img-top" alt="..."></a>
+                        <img src="assets/CSSCreaturepng.png" class="card-img-top" alt="..." id="cat"></a>
                     <div class="card-body">
                         <h5 class="card-title">CSS Creature</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">This was a introductory to CSS project in which I was tasked with creating
+                            a "creature" using only CSS styling.The creature I created vaguely resembles the Cheshire
+                            Cat from <i>Alice In Wonderland</i>, hence the name "Budget Cheshire".</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <a href="https://ccmalcom.github.io/static-layout/" target="_blank">
                         <img src="assets/static-layout.png" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">Static Layout</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">This was an assignment for my Eleven Fifty Web Development course to
+                            recreate two view heights of an external website using only HTML & CSS. This site is not
+                            responsive</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
-                    <a href="https://ccmalcom.github.io/APIproject1/">
+                <div class="card h-100">
+                    <a href="https://ccmalcom.github.io/APIproject1/" target="_blank">
                         <img src="assets/api-1.png" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">API 1 - D&D Weapon Generator</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
+                        <p class="card-text">I designed this website to test my knowledge with pulling data from an API.
+                            I used 'dnd5eapi.co' to compiile a list of weapons and their stats. When a user interacts
+                            with the site, they will be presented with a weapon drawn at random from the API.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
-                    <a href="https://api-2-ad163.web.app/">
+                <div class="card h-100">
+                    <a href="https://api-2-ad163.web.app/" target="_blank">
                         <img src="assets/api-2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
                     </a>
-                    <h5 class="card-title">API-2 - Curiosity Rover Images</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <div class="card-body">
+                        <h5 class="card-title">API 2 - Curiosity Rover Images</h5>
+                        <p class="card-text">Another site dealing with API data, this pulls images by date and camera from
+                        the NASA Curiosity Rover.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="col">
+                <div class="card h-100">
+                    <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE" target="_blank">
+                        <img src="assets/badges-webdev_blue.png" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Blue Badge</h5>
+                        <p class="card-text">Reserved for Blue Badge Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE" target="_blank">
+                        <img src="assets/badges-webdev_red.png" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Red Badge</h5>
+                        <p class="card-text">Reserved for Red Badge Projects</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Contact -->
     <section id="contact">
-        <h1>Contact</h1>
-        <form action="https://formspree.io/f/xwkalrjq" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <br>
-            <input type="email" name="_replyto" id="" placeholder="someone@something.com" required>
-            <br>
-            <input type="tel" name="phoneNumber" id="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"placeholder="xxx-xxx-xxxx">
-            <br>
-            <input type="text" name="subject" id="" placeholder="Subject" required>
-            <br>
-            <input type="textArea" name="message" placeholder='Your Message' required>
-            <br>
-            <button type="submit">Send</button>
-        </form>
+        <div id='contactHeadings'>
+        <h1>Contact:</h1>
+        <p>The form on the right will send a message directly to my email. My github and linkedin profiles are also available at the bottom of the webpage if you prefer to send a message there.</p>
+        </div>
+        <div id='form'>
+            <form action="https://formspree.io/f/xwkalrjq" method="POST">
+                <div id = 'leftRightForm'>
+                    <div id='leftForm'>
+                        <input type="text" name="name" id= 'name' placeholder="Your Name" required>
+                        <br>
+                        <input type="email" name="_replyto" id="email" placeholder="someone@something.com" required>
+                        <br>
+                    </div>
+                    <div id="rightForm">
+                        <input type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Phone Number (1234567890)">
+                        <br>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <br>
+                    </div>
+                </div>
+                    <div id='messageDiv'>
+                        <textarea  name="message" placeholder='Your Message' id='message' required></textarea>
+                        <br>
+                    </div>
+                    <div id="button">
+                        <button type="submit" id='sendButton'>Send Message</button>
+                    </div>
+                </form>
+        </div>
     </section>
 
     <!-- Footer -->
+    <section id='footer'>
+        <div id='footerLinks'>
+            <a href="https://github.com/ccmalcom"  style="text-decoration: none;"><i
+                    class="fab fa-github fa-5x" target='_blank'></i></a>
+            <a href="https://www.linkedin.com/in/chase-malcom-674b525a/" target="_blank" ><i
+                    class="fab fa-linkedin fa-5x"></i></a>
+        </div>
+        <p>Created by Chase Malcom</p>
+        <p>Copyright &copy 2021</p>
+    </section>
+
+
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/63088848de.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
