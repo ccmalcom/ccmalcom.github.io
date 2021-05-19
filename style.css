@@ -88,11 +88,6 @@ nav img{
 	align-items: center;
 	
 }
-.nav-link{
-	color: white;
-	font-family: 'poppins', sans-serif;
-	letter-spacing: 2px;
-}
 .navbar-brand{
 	color: white;
 	font-family: 'poppins', sans-serif;
@@ -100,13 +95,24 @@ nav img{
 	letter-spacing: 2px;
 }
 
+.nav-link{
+	color: white;
+	font-family: 'poppins', sans-serif;
+	letter-spacing: 2px;
+}
 
 .nav-link i{
 	color: #E6FF00;
 }
 
-.navbar{
-	padding: .5% 5%;
+.nav-link i:hover{
+	color: white;
+	transition: 200ms;
+}
+
+.nav-link:hover{
+	color: #E6FF00;
+	transition: 200ms;
 }
 #contactLink{
 	border: 1px solid #E6FF00
@@ -117,15 +123,15 @@ nav img{
 	color: #F7344F;
 	transition: 200ms;
 }
+.navbar{
+	padding: .5% 5%;
+}
 
 .container{
 	width: fit-content;
 	margin-left: 0;
 }
 
-.nav-link:hover{
-	color: #E6FF00;
-}
 
 @media screen and (max-width: 545px){
 	.nav{
