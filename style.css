@@ -101,6 +101,14 @@ nav img{
 	letter-spacing: 2px;
 }
 
+.nav-link:hover{
+	color: #E6FF00;
+	transition: 200ms;
+}
+
+.nav-link:visited{
+	color: white;
+}
 .nav-link i{
 	color: #E6FF00;
 }
@@ -110,10 +118,6 @@ nav img{
 	transition: 200ms;
 }
 
-.nav-link:hover{
-	color: #E6FF00;
-	transition: 200ms;
-}
 #contactLink{
 	border: 1px solid #E6FF00
 }
@@ -226,11 +230,11 @@ nav img{
 	padding-top: 20px;
 }
 
-#externalLinks .fab{
+#externalLinks .fab, #externalLinks .fas{
 	color: #eeff00;
 }
 
-#externalLinks .fab:hover{
+#externalLinks .fab:hover, #externalLinks .fas:hover{
 	color: black;
 	transition: 200ms;
 }
