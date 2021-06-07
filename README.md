@@ -1,8 +1,6 @@
 <h1 align="center">Hi 👋, I'm Chase Malcom</h1>
 <h3 align="center">Full Stack Web Developer</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=ccmalcom&label=Profile%20views&color=0e75b6&style=flat" alt="ccmalcom" /> </p>
-
 - 🔭 I’m currently working on **ElevenFifty Full Stack Course**
 
 - 🌱 I’m currently learning **React**
