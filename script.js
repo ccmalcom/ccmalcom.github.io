@@ -70,3 +70,9 @@ typewriter = setupTypewriter(typewriter);
 typewriter.type();
 
 //* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea
+
+// const card = document.querySelector('.card__inner');
+
+// card.addEventListener('click', function(){
+//     card.classList.toggle('is-flipped');
+// })

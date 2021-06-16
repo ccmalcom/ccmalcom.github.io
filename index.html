@@ -17,21 +17,18 @@
 <body>
     <!-- navbar -->
     <nav class="navbar sticky-top navbar-dark bg-color nav justify-content-end">
-        <div class="container" >
+        <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="assets/web-logo.png" alt="" class="d-inline-block align-text-top">
                 CCMedia
             </a>
         </div>
         <ul class="nav">
-            <li class ="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="#header"><i class="fas fa-lg fa-angle-double-up"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#aboutMe">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://chasemalcomphotography.pixieset.com/" target="_blank">Photography</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#projects">Projects</a>
@@ -51,7 +48,7 @@
         5       items:<span class="string-highlight"> ['coffee', 'laptop']</span>
         6       readyToWork:<span class="string-highlight"> true</span>
         7   }; </pre>
-            <!-- Thank you https://codepen.io/stevn/pen/jEZvXa for the idea -->
+        <!-- Thank you https://codepen.io/stevn/pen/jEZvXa for the idea -->
 
     </header>
     <!-- About Me -->
@@ -64,7 +61,8 @@
             <div id="aboutTxt">
                 <p>I was born and raised in a small town right next to Indianapolis. While I am currently a web
                     developer, I
-                    originally started my professional career as a band teacher. It's been a long road from cornfields to the classroom to tech, but web development is a career that I both excel at and enjoy.</p>
+                    originally started my professional career as a band teacher. It's been a long road from cornfields
+                    to the classroom to tech, but web development is a career that I both excel at and enjoy.</p>
 
                 <p>I recived my education through a web development bootcamp at the Eleven Fifty Academy in
                     Indianapolis, IN.
@@ -73,89 +71,121 @@
                     skills for coding as well as being able to communicate with, relate to, and serve my clients as well
                     as my
                     community. </p>
-                    <p>In addition to teaching and coding, I have also done photography work. Click the camera icon below to be routed to my photography portfolio.</p>
-                    <p><small>(Resume accessible via LinkedIn)</small></p>
-                    <div id='externalLinks'>
-                    <a href="https://github.com/ccmalcom"  style="text-decoration: none;"><i
-                        class="fab fa-github fa-5x" target='_blank'></i></a>
-                <a href="https://www.linkedin.com/in/chase-malcom-674b525a/" target="_blank" ><i
-                        class="fab fa-linkedin fa-5x"></i></a>
-                       <a href="https://chasemalcomphotography.pixieset.com/" target="_blank"><i class="fas fa-camera-retro fa-5x"></i></a>
+                
+                <p><small>(Resume accessible via LinkedIn)</small></p>
+                <div id='externalLinks'>
+                    <a href="https://github.com/ccmalcom" style="text-decoration: none;"><i class="fab fa-github fa-5x"
+                            target='_blank'></i></a>
+                    <a href="https://www.linkedin.com/in/chase-malcom-674b525a/" target="_blank"><i
+                            class="fab fa-linkedin fa-5x"></i></a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Projects -->
+    
     <section id="projects">
         <h1>Projects</h1>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <a href="https://codepen.io/ccmalcom/pen/wvgZeoN" target="_blank">
-                        <img src="assets/CSSCreaturepng.png" class="card-img-top" alt="..." id="cat"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">CSS Creature</h5>
-                        <p class="card-text">This was a introductory to CSS project in which I was tasked with creating
-                            a "creature" using only CSS styling.The creature I created vaguely resembles the Cheshire
-                            Cat from <i>Alice In Wonderland</i>, hence the name "Budget Cheshire".</p>
+        <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col"> -->
+                
+        <div class="wrapper">
+            <div class="first-row">
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <!-- <h2>CSS Creature</h2> -->
+                            <img src="./assets/CSSCreaturepng.png" alt="" class="flip-card-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>CSS Creature</h3>
+                            <p>This was a introductory to CSS project in which I was tasked with creating
+                                a "creature" using only CSS styling.The creature I created vaguely resembles the
+                                Cheshire
+                                Cat from <i>Alice In Wonderland</i>, hence the name "Budget Cheshire".</p>
+                            <a href="https://codepen.io/ccmalcom/pen/wvgZeoN" target="_blank"><button
+                                    class='cardButton'>View</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <!-- <h2>Carolina Crown <br> Static Layout</h2> -->
+                                <img src="assets/static-layout.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Carolina Crown <br> Static Layout</h3>
+                            <p>This was an assignment for my Eleven Fifty Web Development course to
+                                recreate two view heights of an external website using only HTML & CSS. This site is not
+                                responsive.</p>
+                                <a href="https://ccmalcom.github.io/static-layout/" target="_blank"><button
+                                    class='cardButton'>View</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <!-- <h2>D&D Weapon Generator</h2> -->
+                                <img src="assets/api-1.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>API 1 - D&D Weapon Generator</h3>
+                            <p>This website pulls from 'dnd5eapi.co' to compiile a list of weapons and their stats. When a user
+                                interacts
+                                with the site, they will be presented with a weapon drawn at random from the API.</p>
+                                <a href="https://ccmalcom.github.io/APIproject1/"target="_blank"><button
+                                    class='cardButton'>View</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <a href="https://ccmalcom.github.io/static-layout/" target="_blank">
-                        <img src="assets/static-layout.png" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Static Layout</h5>
-                        <p class="card-text">This was an assignment for my Eleven Fifty Web Development course to
-                            recreate two view heights of an external website using only HTML & CSS. This site is not
-                            responsive.</p>
+            <div class="second-row">
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <!-- <h2>Curiosity Rover Images</h2> -->
+                                <img src="assets/api-2.png" class="card-img-top" alt="...">
+                            
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>API 2 - Curiosity Rover Images</h3>
+                            <p>Another site dealing with API data, this pulls images by date and
+                                camera from
+                                the NASA Curiosity Rover.</p>
+                                <a href="https://api-2-ad163.web.app/"target="_blank"><button
+                                    class='cardButton'>View</button></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <a href="https://ccmalcom.github.io/APIproject1/" target="_blank">
-                        <img src="assets/api-1.png" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <h5 class="card-title">API 1 - D&D Weapon Generator</h5>
-                        <p class="card-text">I designed this website to test my knowledge with pulling data from an API.
-                            I used 'dnd5eapi.co' to compiile a list of weapons and their stats. When a user interacts
-                            with the site, they will be presented with a weapon drawn at random from the API.</p>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <!-- <h2>Blue Badge</h2> -->
+                                <img src="assets/badges-webdev_blue.png" class="card-img-top" alt="...">
+                            
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Blue Badge</h3>
+                            <p>Reserved for Blue Badge Projects.</p>
+                            <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE"target="_blank"><button
+                                class='cardButton'>View</button></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <a href="https://api-2-ad163.web.app/" target="_blank">
-                        <img src="assets/api-2.png" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">API 2 - Curiosity Rover Images</h5>
-                        <p class="card-text">Another site dealing with API data, this pulls images by date and camera from
-                        the NASA Curiosity Rover.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE" target="_blank">
-                        <img src="assets/badges-webdev_blue.png" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Blue Badge</h5>
-                        <p class="card-text">Reserved for Blue Badge Projects.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE" target="_blank">
-                        <img src="assets/badges-webdev_red.png" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Red Badge</h5>
-                        <p class="card-text">Reserved for Red Badge Projects.</p>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <!-- <h2>Red Badge</h2> -->
+                                <img src="assets/badges-webdev_red.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Red Badge</h3>
+                            <p>Reserved for Red Badge Projects.</p>
+                            <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE" target="_blank"><button
+                                class='cardButton'>View</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,42 +194,45 @@
     <!-- Contact -->
     <section id="contact">
         <div id='contactHeadings'>
-        <h1>Contact:</h1>
-        <p>The form on the right will send a message directly to my email. My github and linkedin profiles are also available at the bottom of the webpage if you prefer to send a message there. I'm excited to hear from you!</p>
+            <h1>Contact:</h1>
+            <p>The form on the right will send a message directly to my email. My github and linkedin profiles are also
+                available at the bottom of the webpage if you prefer to send a message there. I'm excited to hear from
+                you!</p>
         </div>
         <div id='form'>
             <form action="https://formspree.io/f/xwkalrjq" method="POST">
-                <div id = 'leftRightForm'>
+                <div id='leftRightForm'>
                     <div id='leftForm'>
-                        <input type="text" name="name" id= 'name' placeholder="Your Name" required>
+                        <input type="text" name="name" id='name' placeholder="Your Name" required>
                         <br>
                         <input type="email" name="_replyto" id="email" placeholder="someone@something.com" required>
                         <br>
                     </div>
                     <div id="rightForm">
-                        <input type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Phone Number (1234567890)">
+                        <input type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                            placeholder="Phone Number (1234567890)">
                         <br>
                         <input type="text" name="subject" id="subject" placeholder="Subject" required>
                         <br>
                     </div>
                 </div>
-                    <div id='messageDiv'>
-                        <textarea  name="message" placeholder='Your Message' id='message' required></textarea>
-                        <br>
-                    </div>
-                    <div id="button">
-                        <button type="submit" id='sendButton'>Send Message</button>
-                    </div>
-                </form>
+                <div id='messageDiv'>
+                    <textarea name="message" placeholder='Your Message' id='message' required></textarea>
+                    <br>
+                </div>
+                <div id="button">
+                    <button type="submit" id='sendButton'>Send Message</button>
+                </div>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <section id='footer'>
         <div id='footerLinks'>
-            <a href="https://github.com/ccmalcom"  style="text-decoration: none;"><i
-                    class="fab fa-github fa-3x" target='_blank'></i></a>
-            <a href="https://www.linkedin.com/in/chase-malcom-674b525a/" target="_blank" ><i
+            <a href="https://github.com/ccmalcom" style="text-decoration: none;"><i class="fab fa-github fa-3x"
+                    target='_blank'></i></a>
+            <a href="https://www.linkedin.com/in/chase-malcom-674b525a/" target="_blank"><i
                     class="fab fa-linkedin fa-3x"></i></a>
         </div>
         <p>Created by Chase Malcom</p>
