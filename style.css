@@ -75,12 +75,12 @@ header{
 }
 
 nav img{
-	width: 50px;
+	width: calc(24px + 1vw);
 	height: auto;
 	margin-right: 15px;
 }
 .navbar-brand{
-	font-size: 32px;
+	font-size: calc(24px + 1vw);
 	display: flex;
 	align-items: center;
 	
@@ -133,7 +133,65 @@ nav img{
 	margin-left: 0;
 }
 
+#contactAnchor{
+	position: fixed;
+	z-index: 1000;
+	top: 88vh;
+	left: 88vw;
+	border: none;
+	border-radius: 50%;
+	transition: .2s ease-out;
 
+}
+#contactAnchor:hover{
+	transform: scale(1.25);
+	transition: .2s ease;
+}
+#contactAnchor i{
+	color: #E6FF00;
+}
+
+#contactButton{
+	height: 80px ;
+	width: 80px ;
+	border: none;
+	border-radius: 50%;
+	background-color: #F7344F;
+}
+.dropdown{
+	display: none;
+	color: #F7344F;
+}
+
+.dropdown-toggle{
+	color: #F7344F !important;
+	background-color: #E6FF00 !important;
+	border: none;
+}
+
+.dropdown-menu[data-bs-popper]{
+	left: -42px;
+}
+
+.dropdown-menu{
+	min-width: fit-content;
+	font-family: 'Poppins';
+}
+
+@media screen and (max-width: 900px){
+	#contactAnchor{
+	display: none
+	}
+}
+@media screen and (max-width: 768px) {
+	.nav ul{
+		display: none;
+	}
+	.dropdown{
+		display: flex;
+
+	}
+}
 @media screen and (max-width: 545px){
 	.nav{
 		justify-content: start !important;
@@ -159,6 +217,25 @@ nav img{
 	text-shadow: 5px 5px 3px #E6FF00;
 	transition: .5s ease-out;
 }
+
+#aboutMe h3{
+	text-align: center;
+	color: black;
+	margin: auto;	
+	font-size: calc(16px + 1vw);
+	width: fit-content;
+	/* border-bottom: 3px solid #F7344F; */
+	transition: .5s ease-out;
+}
+
+@media screen and (max-width: 559px) {
+	#aboutMe h3{
+		font-size: calc(12px + 1vw);
+		font-weight: 600;
+		margin-top: 20px;
+	}
+}
+
 	#aboutMe h1:hover{
 	transform: scale(1.25);
 	transition: .5s ease;
@@ -239,6 +316,9 @@ nav img{
 	}
 	#aboutTxt{
 		width: 80vw;
+	}
+	#aboutMe p{
+		font-size: calc(10px + 1vw);
 	}
 }
 
@@ -412,7 +492,7 @@ nav img{
 }
 
 #contactHeadings p{
-	font-size: calc(12px + 1vw);
+	font-size: calc(14px + .5vw);
 	font-weight: 500;
 }
 
@@ -533,6 +613,13 @@ nav img{
 	#form{
 		margin-right: 5%;
 		margin-bottom: 5%;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	#form{
+		box-shadow: none;
+		margin: auto;
 	}
 }
 

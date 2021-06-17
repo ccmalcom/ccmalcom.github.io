@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div id='contactAnchor'>
+        <a href="#contact"><button id='contactButton'><i class="far fa-2x fa-paper-plane"></i></button></a>
+    </div>
     <!-- navbar -->
     <nav class="navbar sticky-top navbar-dark bg-color nav justify-content-end">
         <div class="container">
@@ -37,6 +40,18 @@
                 <a class="nav-link" id='contactLink' href="#contact">Contact</a>
             </li>
         </ul>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#aboutMe">About</a></li>
+                <li><a class="dropdown-item" href="#projects">Projects</a></li>
+                <li><a class="dropdown-item" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        </div>
     </nav>
     <!-- landing -->
     <header id="header">
@@ -54,11 +69,13 @@
     <!-- About Me -->
     <section id='aboutMe'>
         <h1>About Me</h1>
+        <h3>Full Stack Web Developer | Coffee Enthusiast</h3>
         <div id="aboutContent">
             <div id='aboutImg'>
                 <img src="assets/me.jpg" alt="">
             </div>
             <div id="aboutTxt">
+                <br>
                 <p>I was born and raised in a small town right next to Indianapolis. While I am currently a web
                     developer, I
                     originally started my professional career as a band teacher. It's been a long road from cornfields
@@ -70,8 +87,8 @@
                     the hard
                     skills for coding as well as being able to communicate with, relate to, and serve my clients as well
                     as my
-                    community. </p>
-                
+                    community. LinkedIn is a great way to connect with me, but over a cup of coffee is even better!</p>
+
                 <p><small>(Resume accessible via LinkedIn)</small></p>
                 <div id='externalLinks'>
                     <a href="https://github.com/ccmalcom" style="text-decoration: none;"><i class="fab fa-github fa-5x"
@@ -83,12 +100,12 @@
         </div>
     </section>
     <!-- Projects -->
-    
+
     <section id="projects">
         <h1>Projects</h1>
         <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col"> -->
-                
+
         <div class="wrapper">
             <div class="first-row">
                 <div class="flip-card ">
@@ -112,14 +129,14 @@
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <!-- <h2>Carolina Crown <br> Static Layout</h2> -->
-                                <img src="assets/static-layout.png" class="card-img-top" alt="...">
+                            <img src="assets/static-layout.png" class="card-img-top" alt="...">
                         </div>
                         <div class="flip-card-back">
                             <h3>Carolina Crown <br> Static Layout</h3>
                             <p>This was an assignment for my Eleven Fifty Web Development course to
                                 recreate two view heights of an external website using only HTML & CSS. This site is not
                                 responsive.</p>
-                                <a href="https://ccmalcom.github.io/static-layout/" target="_blank"><button
+                            <a href="https://ccmalcom.github.io/static-layout/" target="_blank"><button
                                     class='cardButton'>View</button></a>
                         </div>
                     </div>
@@ -128,14 +145,15 @@
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <!-- <h2>D&D Weapon Generator</h2> -->
-                                <img src="assets/api-1.png" class="card-img-top" alt="...">
+                            <img src="assets/api-1.png" class="card-img-top" alt="...">
                         </div>
                         <div class="flip-card-back">
                             <h3>API 1 - D&D Weapon Generator</h3>
-                            <p>This website pulls from 'dnd5eapi.co' to compiile a list of weapons and their stats. When a user
+                            <p>This website pulls from 'dnd5eapi.co' to compiile a list of weapons and their stats. When
+                                a user
                                 interacts
                                 with the site, they will be presented with a weapon drawn at random from the API.</p>
-                                <a href="https://ccmalcom.github.io/APIproject1/"target="_blank"><button
+                            <a href="https://ccmalcom.github.io/APIproject1/" target="_blank"><button
                                     class='cardButton'>View</button></a>
                         </div>
                     </div>
@@ -145,16 +163,16 @@
                 <div class="flip-card ">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                                <!-- <h2>Curiosity Rover Images</h2> -->
-                                <img src="assets/api-2.png" class="card-img-top" alt="...">
-                            
+                            <!-- <h2>Curiosity Rover Images</h2> -->
+                            <img src="assets/api-2.png" class="card-img-top" alt="...">
+
                         </div>
                         <div class="flip-card-back">
                             <h3>API 2 - Curiosity Rover Images</h3>
                             <p>Another site dealing with API data, this pulls images by date and
                                 camera from
                                 the NASA Curiosity Rover.</p>
-                                <a href="https://api-2-ad163.web.app/"target="_blank"><button
+                            <a href="https://api-2-ad163.web.app/" target="_blank"><button
                                     class='cardButton'>View</button></a>
                         </div>
                     </div>
@@ -162,29 +180,29 @@
                 <div class="flip-card ">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                                <!-- <h2>Blue Badge</h2> -->
-                                <img src="assets/badges-webdev_blue.png" class="card-img-top" alt="...">
-                            
+                            <!-- <h2>Blue Badge</h2> -->
+                            <img src="assets/badges-webdev_blue.png" class="card-img-top" alt="...">
+
                         </div>
                         <div class="flip-card-back">
                             <h3>Blue Badge</h3>
                             <p>Reserved for Blue Badge Projects.</p>
-                            <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE"target="_blank"><button
-                                class='cardButton'>View</button></a>
+                            <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE"
+                                target="_blank"><button class='cardButton'>View</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="flip-card ">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                                <!-- <h2>Red Badge</h2> -->
-                                <img src="assets/badges-webdev_red.png" class="card-img-top" alt="...">
+                            <!-- <h2>Red Badge</h2> -->
+                            <img src="assets/badges-webdev_red.png" class="card-img-top" alt="...">
                         </div>
                         <div class="flip-card-back">
                             <h3>Red Badge</h3>
                             <p>Reserved for Red Badge Projects.</p>
-                            <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE" target="_blank"><button
-                                class='cardButton'>View</button></a>
+                            <a href="https://elevenfifty.org/?utm_term=eleven%20fifty&utm_campaign=Search+%E2%80%94+Branded&utm_source=adwords&utm_medium=ppc&hsa_acc=6681805502&hsa_cam=1476163801&hsa_grp=58725368098&hsa_ad=442042187908&hsa_src=g&hsa_tgt=aud-738384211171:kwd-336556484833&hsa_kw=eleven%20fifty&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwy42FBhB2EiwAJY0yQjXfrCEg04JUptwT3B1hLxUybFOA8qKRqUcyN7CJXAppdnViDItE2BoCszoQAvD_BwE"
+                                target="_blank"><button class='cardButton'>View</button></a>
                         </div>
                     </div>
                 </div>
