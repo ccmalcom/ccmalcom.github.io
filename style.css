@@ -35,7 +35,6 @@
 /* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea */
 
 html {
-	overflow-x: hidden;
 	font-family: 'poppins', sans-serif;
 }
 
@@ -390,6 +389,9 @@ nav .container {
 	#mobileView {
 		display: block;
 	}
+	#externalLinks{
+		width: 60%;
+	}
 	#middleContent {
 		flex-direction: column;
 	}
@@ -406,6 +408,7 @@ nav .container {
 		width: 100%;
 		height: 120px;
 		position: relative;
+		overflow: hidden;
 		/* display: flex;
 		justify-content: space-evenly; */
 	}
@@ -425,7 +428,7 @@ nav .container {
 		animation-iteration-count: infinite;
 	}
 	#skills2{
-		left: 1060px;
+		left: 1120px;
 	}
 	#skills .col, #skills2 .col {
 		max-height: 100px;
@@ -433,7 +436,6 @@ nav .container {
 		display: inline-block;
 		/* margin-top: 30px; */
 		margin-left: 10px;
-		float: left;
 		overflow: hidden;
 		text-align: center;
 	}
@@ -442,7 +444,7 @@ nav .container {
 			transform: translateX(0);
 		}
 		100% {
-			transform: translateX(-1035px);
+			transform: translateX(-1100px);
 		}
 	}
 	@keyframes pan {
@@ -450,7 +452,7 @@ nav .container {
 			transform: translateX(0);
 		}
 		100% {
-			transform: translateX(-1035px);
+			transform: translateX(-1100px);
 		}
 	}
 }
