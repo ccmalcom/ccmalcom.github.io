@@ -300,7 +300,7 @@ nav .container {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: 2% auto;
+	margin: 2% 2%;
 }
 
 #bottomContent {
@@ -395,6 +395,7 @@ nav .container {
 	}
 	#middleContent {
 		flex-direction: column;
+		margin: 2% 0;
 	}
 	#aboutMe img {
 		max-width: 400px;
