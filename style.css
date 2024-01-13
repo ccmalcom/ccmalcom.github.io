@@ -341,7 +341,7 @@ nav .container {
 
 }
 #certifications img{
-	length: 100px;
+	height: 100px;
 	width: 100px;
 	display: flex;
 	justify-content: center;
