@@ -8,10 +8,10 @@ function setupTypewriter(t) {
         writingTag = false,
         tagOpen = false,
         typeSpeed = 1,
-    tempTypeSpeed = 0;
+        tempTypeSpeed = 0;
 
-    var type = function() {
-    
+    var type = function () {
+
         if (writingTag === true) {
             tag += HTML[cursorPosition];
         }
@@ -52,6 +52,14 @@ function setupTypewriter(t) {
         }
 
         cursorPosition += 1;
+        if (cursorPosition === HTML.indexOf('<span id="darkModeStatus">')) {
+            // Check dark mode status from localStorage or system preference
+            var isDarkMode = localStorage.getItem('colorScheme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
+            // Set the appropriate text for the dark mode status
+            var darkModeText = isDarkMode ? 'enabled' : 'disabled';
+            // Replace the placeholder text with the actual status
+            HTML = HTML.replace('Dark Mode: disabled', 'Dark Mode: ' + darkModeText);
+        }
         if (cursorPosition < HTML.length - 1) {
             setTimeout(type, tempTypeSpeed);
         }
@@ -73,20 +81,41 @@ typewriter.type();
 
 // darkmode toggle 
 document.addEventListener('DOMContentLoaded', function () {
-    const darkModeToggle = document.getElementById('darkModeToggle');
+
+
+    // const darkModeToggleContainer = document.getElementById('darkModeStatus');
+    // const darkModeStatus = document.getElementById('darkModeStatus');
+    // const themeStylesheet = document.getElementById('themeStylesheet');
+    // let isDarkMode = localStorage.getItem('colorScheme') === 'dark' || 
+    // (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    // // Set the initial state
+    // darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
+    // themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
+
+
+    // darkModeStatus.addEventListener('click', function () {
+    //     isDarkMode = !isDarkMode; // Toggle the boolean value
+    //     darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
+    //     themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
+    //     localStorage.setItem('colorScheme', isDarkMode ? 'dark' : 'light');
+    // });
+    const sun = document.querySelector('.sun')
+    const moon = document.querySelector('.moon')
+    const button = document.querySelector('.modeContainer')
     const themeStylesheet = document.getElementById('themeStylesheet');
-    const currentScheme = localStorage.getItem('colorScheme') || 'light';
-
-        darkModeToggle.checked = (currentScheme === 'dark');
+    let isDarkMode = localStorage.getItem('colorScheme') === 'dark' || 
+    (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);    
+    sun.classList.toggle('visible', !isDarkMode);
+    moon.classList.toggle('visible', isDarkMode);
+    themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
     
-
-    darkModeToggle.addEventListener('change', function(event) {
-        if (event.target.checked) {
-            themeStylesheet.href = '/dark-mode.css';
-            localStorage.setItem('colorScheme', 'dark');
-        } else {
-            themeStylesheet.href = '/light-mode.css';
-            localStorage.setItem('colorScheme', 'light');
-        }
-    });
+    button.addEventListener('click', () => {
+        isDarkMode = !isDarkMode; // Toggle the boolean value
+        sun.classList.toggle('visible')
+        moon.classList.toggle('visible')
+        // darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
+        themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
+        localStorage.setItem('colorScheme', isDarkMode ? 'dark' : 'light');
 });
+
+})

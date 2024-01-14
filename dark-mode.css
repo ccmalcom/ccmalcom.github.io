@@ -13,7 +13,7 @@
 		top: 20%;
 		font-size:calc(12px + 1.5vw);
 		font-family: "Courier New";
-        color: #FCF2E3;
+        color: #F1E6D3;
 	min-height: 40vh;
 	overflow-x: hidden;
 }
@@ -60,7 +60,153 @@ header {
 	min-height: 40vh;
 	width: 100vw;
 	background-color: rgb(50, 50, 50);
+	display: flex;
 }
+
+#darkModeToggleContainer {
+    /* Add styles here to match your console's appearance */
+    color: white; /* Example style */
+    cursor: pointer; /* Make it clear the text is clickable */
+}
+
+#darkModeToggleContainer #darkModeStatus {
+    /* Style the status indicator */
+    display: inline-block;
+    width: 80px; /* Adjust as needed */
+    text-align: center;
+    margin-left: 10px;
+    /* Additional styling */
+	background-color: transparent;
+	border: 1px solid #F1E6D3;
+}
+
+.modeContainer {
+	width: 46px;
+	height: 46px;
+	box-sizing: border-box;
+	padding: 12px;
+	background: none;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+  }
+  
+  .sun {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	transform: scale(0.6) rotate(0deg);
+	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+	
+  /*  white transparent for Safari  */
+	background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, #f0f0f0 50%);
+  }
+  
+  .sun:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, #f0f0f0 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, #f0f0f0 50%);
+	transform: rotate(45deg);
+  }
+  
+  .sun.visible {
+	pointer-events: auto;
+	opacity: 1;
+	transform: scale(1) rotate(180deg);
+	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+  }
+	  
+  .moon {
+	width: 50%;
+	height: 50%;
+	pointer-events: none;
+	position: absolute;
+	left: 12.5%;
+	top: 18.75%;
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 50%;
+	box-shadow: 9px 3px 0px 0px #f0f0f0;
+	opacity: 0;
+	transform: scale(0.3) rotate(65deg);
+	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+  }
+  
+  .moon.visible {
+	pointer-events: auto;
+	opacity: 1;
+	transform: scale(1) rotate(0deg);
+	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+  }
+  
+  .star {
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-bottom: 5px solid #f0f0f0;
+	border-left: 7px solid rgba(0, 0, 0, 0);
+	transform: scale(0.55) rotate(35deg);  
+	opacity: 0;
+	transition: all 0.2s ease-in 0.4s;
+  }
+  
+  .star:before {
+	border-bottom: 5px solid #f0f0f0;
+	border-left: 3px solid rgba(0, 0, 0, 0);
+	border-right: 3px solid rgba(0, 0, 0, 0);
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: -3px;
+	left: -5px;
+	display: block;
+	content: '';
+	transform: rotate(-35deg);
+  }
+  
+  .star:after {
+	position: absolute;
+	display: block;
+	color: red;
+	top: 0px;
+	left: -7px;
+	width: 0px;
+	height: 0px;
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-bottom: 5px solid #f0f0f0;
+	border-left: 7px solid rgba(0, 0, 0, 0);
+	transform: rotate(-70deg);
+	content: '';
+  }
+  
+  .moon.visible .star {
+	opacity: .8;
+  /*   transform: rotate(35deg); */
+  }
+  
+  .star.small {
+	transform: scale(0.35) rotate(35deg);
+	position: relative;
+	top: 50%;
+	left: 37.5%;
+	opacity: 0;
+	transition: all 0.2s ease-in 0.45s;
+  }
+  
+  .moon.visible .star.small {
+	opacity: .7;
+	transform: scale(0.45) rotate(35deg);
+  }
 
 
 @media screen and (max-width: 600px) {
@@ -228,6 +374,8 @@ nav .container {
 		left: 78%
 	}
 }
+
+
 /* ABOUT */
 
 #aboutMe {
@@ -245,7 +393,7 @@ nav .container {
 
 #aboutMe h1 {
 	text-align: center;
-	color: #FCF2E3;
+	color: #F1E6D3;
 	margin: 0 auto 3% auto;
 	width: fit-content;
 	font-size: calc(40px + 2vw);
@@ -256,7 +404,7 @@ nav .container {
 
 #aboutMe h3 {
 	text-align: center;
-	color: #FCF2E3;
+	color: #F1E6D3;
 	margin: auto;
 	font-size: calc(16px + 1vw);
 	width: fit-content;
@@ -317,7 +465,7 @@ nav .container {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: #FCF2E3;
+	color: #F1E6D3;
 }
 
 #aboutImg, #aboutTxt, #skills, #certifications{
@@ -414,7 +562,7 @@ nav .container {
 	width: 33.3vw;
 	text-align:  center;
 	letter-spacing: 1px;
-	color: #FCF2E3;
+	color: #F1E6D3;
 	font-weight: 500;
 	line-height: 170%;
 	
@@ -600,7 +748,7 @@ nav .container {
 }
 
 .flip-card-front {
-	color: #FCF2E3;
+	color: #F1E6D3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -612,7 +760,7 @@ nav .container {
 
 .flip-card-back {
 	background-color: rgb(50, 50, 50);
-	color: #FCF2E3;
+	color: #F1E6D3;
 	transform: rotateY(180deg);
 	display: flex;
 	flex-direction: column;
@@ -639,7 +787,7 @@ nav .container {
 }
 
 .flip-card button:hover {
-	/* background-color: #FCF2E3; */
+	/* background-color: #F1E6D3; */
 	color: rgb(50, 50, 50);
 	transform: scale(1.1);
 	transition: .5s;
@@ -694,7 +842,7 @@ nav .container {
 #sendButton {
 	margin: 10px;
 	background-color: #BB6B6B;
-	color: #FCF2E3;
+	color: #F1E6D3;
 	border: transparent;
 	width: 520px;
 	height: 50px;
@@ -704,7 +852,7 @@ nav .container {
 }
 
 #sendButton:hover {
-	border: 1px solid #FCF2E3;
+	border: 1px solid #F1E6D3;
 	transition: 200ms;
 }
 
@@ -717,7 +865,7 @@ nav .container {
 
 #contactHeadings p {
 	width: 80%;
-	color: #FCF2E3;
+	color: #F1E6D3;
 	letter-spacing: 1px;
 }
 
@@ -742,7 +890,7 @@ nav .container {
 
 #name, #email, #phoneNumber, #subject, #message {
 	margin: 10px;
-	border-color: #FCF2E3;
+	border-color: #F1E6D3;
 }
 
 #button {
@@ -826,7 +974,7 @@ nav .container {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	color: #FCF2E3;
+	color: #F1E6D3;
 	text-align: center;
 	width: 100vw;
 }
@@ -839,7 +987,7 @@ nav .container {
 }
 
 #footer .fab {
-	color: #FCF2E3;
+	color: #F1E6D3;
 }
 
 #footer .fab:hover {
