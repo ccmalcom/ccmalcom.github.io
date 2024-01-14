@@ -11,7 +11,17 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" id="themeStylesheet" href="light-mode.css">
+    <script>
+        (function () {
+            var currentScheme = localStorage.getItem('colorScheme') || 'light';
+            var themeStylesheet = document.getElementById('themeStylesheet');
+            if (currentScheme === 'dark') {
+                themeStylesheet.href = 'dark-mode.css';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Chase Malcom</title>
 </head>
@@ -23,11 +33,12 @@
     <!-- navbar -->
     <nav class="navbar sticky-top navbar-dark bg-color nav justify-content-end">
         <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="assets/web-logo.png" alt="" class="d-inline-block align-text-top">
+            <a href="#" class="navbar-brand" id="logo-link">
+                <img src="assets/web-logo.png" alt="" class="d-inline-block align-text-top" id="logo">
                 CCMedia
             </a>
         </div>
+
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link" href="#header"><i class="fas fa-lg fa-angle-double-up"></i></a>
@@ -41,6 +52,16 @@
             <li class="nav-item">
                 <a class="nav-link" id='contactLink' href="#contact">Contact</a>
             </li>
+            <li class="nav-item">
+                <button class="modeContainer" aria-label="Toggle color mode" title="Toggle color mode">
+                    <div class="sun visible">
+                    </div>
+                    <div class="moon">
+                        <div class="star"></div>
+                        <div class="star small"></div>
+                    </div>
+                </button>
+            </li>
         </ul>
         <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -51,6 +72,16 @@
                 <li><a class="dropdown-item" href="#aboutMe">About</a></li>
                 <li><a class="dropdown-item" href="#projects">Projects</a></li>
                 <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                <li class="nav-item">
+                    <button class="modeContainer" aria-label="Toggle color mode" title="Toggle color mode">
+                        <div class="sun visible">
+                        </div>
+                        <div class="moon">
+                            <div class="star"></div>
+                            <div class="star small"></div>
+                        </div>
+                    </button>
+                </li>
             </ul>
         </div>
         </div>
@@ -64,9 +95,10 @@
         4       location: <span class="string-highlight">'Indianapolis'</span>,
         5       items:<span class="string-highlight"> ['coffee', 'laptop']</span>
         6       readyToWork:<span class="string-highlight"> true</span>
-        7   }; </pre>
-        <!-- Thank you https://codepen.io/stevn/pen/jEZvXa for the idea -->
+        7   }; 
+    </pre>
 
+        <!-- Thank you https://codepen.io/stevn/pen/jEZvXa for the idea -->
     </header>
     <!-- About Me -->
     <section id='aboutMe'>
@@ -80,27 +112,40 @@
             </div>
             <div id="middleContent">
                 <!-- <div id='certificationsContainer'> -->
-                    <div id='certifications' data-aos="fade-right">
-                        <a href="https://drive.google.com/file/d/19vEofw3P_SpayDgg30E6u6Tvj_AITSPG/view?usp=sharing" target="_blank" >
-                            <img src="assets/OSDevCert.png" alt="OmniStudio Dev Certification">
-                        </a>
-                        <a href="https://drive.google.com/file/d/1bNc8n1a_dYl7tDbOUhejSm1RzmDT5eYZ/view?usp=sharing" target="_blank">
-                            <img src="assets/OSConsultCert.png" alt="OmniStudio Consultant Certification">
-                        </a>
-                        <a href="https://drive.google.com/file/d/1Anv9CVL9U_lh17TA-LlMhHlYaaS7ApyX/view?usp=sharing" target="_blank">
-                            <img src="assets/adminCert.png" alt="Salesforce Administrator Certification">
-                        </a>
-                        <a href="https://drive.google.com/file/d/1aZTqzxnzFKkg3G5wQOd9KzlzldnhP_U4/view?usp=sharing" target="_blank">
-                            <img src="assets/VlocityINSCert.png" alt="Vlocity Insurance Quoting Developer Certification">
-                        </a>
-                    </div>
+                <div id='certifications' data-aos="fade-right">
+                    <a href="https://drive.google.com/file/d/19vEofw3P_SpayDgg30E6u6Tvj_AITSPG/view?usp=sharing"
+                        target="_blank">
+                        <img src="assets/OSDevCert.png" alt="OmniStudio Dev Certification">
+                    </a>
+                    <a href="https://drive.google.com/file/d/1bNc8n1a_dYl7tDbOUhejSm1RzmDT5eYZ/view?usp=sharing"
+                        target="_blank">
+                        <img src="assets/OSConsultCert.png" alt="OmniStudio Consultant Certification">
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Anv9CVL9U_lh17TA-LlMhHlYaaS7ApyX/view?usp=sharing"
+                        target="_blank">
+                        <img src="assets/adminCert.png" alt="Salesforce Administrator Certification">
+                    </a>
+                    <a href="https://drive.google.com/file/d/1aZTqzxnzFKkg3G5wQOd9KzlzldnhP_U4/view?usp=sharing"
+                        target="_blank">
+                        <img src="assets/VlocityINSCert.png" alt="Vlocity Insurance Quoting Developer Certification">
+                    </a>
+                </div>
                 <!-- </div> -->
                 <div id="aboutTxt" data-aos="fade-up">
                     <br>
-                    <p>I'm <span id="nameFlair">Chase</span>, a Full Stack Developer with expertise in React, React Native, JavaScript/TypeScript, HTML, CSS, Java, and SQL, among other technologies. In my current role at Salesforce, I utilize proprietary and industry-specific products like Flow Builder, OmniStudio, and Lightning Web Components to create individualized solutions for businesses across a variety of industries </p>
-                    <p>Before I ventured into the tech industry, I spent a few years as a band teacher, honing my skills in personnel management, training, education, and communication. In 2020, I completed a bootcamp and have been dedicated to expanding my technical skills and knowledge of web development since then.
+                    <p>I'm <span id="nameFlair">Chase</span>, a Full Stack Developer with expertise in React, React
+                        Native, JavaScript/TypeScript, HTML, CSS, Java, and SQL, among other technologies. In my current
+                        role at Salesforce, I utilize proprietary and industry-specific products like Flow Builder,
+                        OmniStudio, and Lightning Web Components to create individualized solutions for businesses
+                        across a variety of industries </p>
+                    <p>Before I ventured into the tech industry, I spent a few years as a band teacher, honing my skills
+                        in personnel management, training, education, and communication. In 2020, I completed a bootcamp
+                        and have been dedicated to expanding my technical skills and knowledge of web development since
+                        then.
                     </p>
-                    <p>I am passionate about using technology to help businesses achieve their goals, and I am always looking for new opportunities to learn and grow in the tech industry. If you're interested in collaborating or connecting, please feel free to reach out to me.</p>
+                    <p>I am passionate about using technology to help businesses achieve their goals, and I am always
+                        looking for new opportunities to learn and grow in the tech industry. If you're interested in
+                        collaborating or connecting, please feel free to reach out to me.</p>
                 </div>
                 <div id="skills" data-aos="fade-left">
                     <li class="col" id="javascript"><i class="fab fa-js-square fa-5x" style="color: #f0db4f;"></i>
@@ -142,8 +187,15 @@
                 </div>
                 <div id="aboutTxt" data-aos="fade-up">
                     <br>
-                    <p>I'm <span id=nameFlair>Chase</span>, a Full Stack, 7x certified Salesforce Developer. In my current role at Salesforce, I utilize proprietary products such as OmniStudio, Apex, Lightning Web Components, and other custom components to create individualized scalable, and efficient solutions to businesses of all sizes across many industries. 
-                    </p><p>While I am currently a developer, I started my professional career as a band teacher. Over the past 8 years of study, I have been learning and putting into practice effective communication, personnel management, training and education, as well as my technical skills. LinkedIn is a great way to connect with me, but over a cup of coffee is even better!
+                    <p>I'm <span id=nameFlair>Chase</span>, a Full Stack, 7x certified Salesforce Developer. In my
+                        current role at Salesforce, I utilize proprietary products such as OmniStudio, Apex, Lightning
+                        Web Components, and other custom components to create individualized scalable, and efficient
+                        solutions to businesses of all sizes across many industries.
+                    </p>
+                    <p>While I am currently a developer, I started my professional career as a band teacher. Over the
+                        past 8 years of study, I have been learning and putting into practice effective communication,
+                        personnel management, training and education, as well as my technical skills. LinkedIn is a
+                        great way to connect with me, but over a cup of coffee is even better!
                     </p>
                 </div>
                 <div id="skillsList" data-aos="fade-up">
@@ -152,62 +204,76 @@
                             <i class="fab fa-js-square fa-5x" style="color: #f0db4f;"></i>
                         </div>
                         <div class="col" id="typescript">
-                            <img
-                                src="https://img.icons8.com/ios/100/000000/typescript.png" />
+                            <img src="https://img.icons8.com/ios/100/000000/typescript.png" />
                         </div>
                         <div class="col" id="java">
-                            <i class="fab fa-java fa-5x" style="color: #f89820;"></i></div>
+                            <i class="fab fa-java fa-5x" style="color: #f89820;"></i>
+                        </div>
                         <div class="col" id="plsql">
-                            <img
-                                src="https://img.icons8.com/plasticine/100/000000/oracle-pl-sql--v3.png" /></div>
+                            <img src="https://img.icons8.com/plasticine/100/000000/oracle-pl-sql--v3.png" />
+                        </div>
                         <div class="col" id="html">
-                            <i class="fab fa-html5 fa-5x" style="color: #e34c26;"></i></div>
+                            <i class="fab fa-html5 fa-5x" style="color: #e34c26;"></i>
+                        </div>
                         <div class="col" id="css">
                             <i class="fab fa-css3-alt fa-5x" style="color: #264de4;"></i>
                         </div>
                         <div class="col" id="react">
-                            <i class="fab fa-react fa-5x" style="color: blue"></i></div>
+                            <i class="fab fa-react fa-5x" style="color: blue"></i>
+                        </div>
                         <div class="col" id='next'>
-                            <img src="/assets/next-js.svg" alt=""></div>
+                            <img src="/assets/next-js.svg" alt="">
+                        </div>
                         <div class="col" id="node">
-                            <i class="fab fa-node fa-5x" style="color: #3c873a;"></i></div>
+                            <i class="fab fa-node fa-5x" style="color: #3c873a;"></i>
+                        </div>
                         <div class="col" id='postgresql'>
-                            <img src="/assets/postgresql.svg" alt=""></div>
+                            <img src="/assets/postgresql.svg" alt="">
+                        </div>
                         <div class="col" id='mysql'>
-                            <img src="/assets/sql.svg" alt="sql"></div>
+                            <img src="/assets/sql.svg" alt="sql">
+                        </div>
                         <div class="col" id='git'>
-                            <img src="/assets/git.svg" alt=""></div>
+                            <img src="/assets/git.svg" alt="">
+                        </div>
                     </div>
                     <div id="skills2">
                         <div class="col" id="javascript">
                             <i class="fab fa-js-square fa-5x" style="color: #f0db4f;"></i>
                         </div>
                         <div class="col" id="typescript">
-                            <img
-                                src="https://img.icons8.com/ios/100/000000/typescript.png" />
+                            <img src="https://img.icons8.com/ios/100/000000/typescript.png" />
                         </div>
                         <div class="col" id="java">
-                            <i class="fab fa-java fa-5x" style="color: #f89820;"></i></div>
+                            <i class="fab fa-java fa-5x" style="color: #f89820;"></i>
+                        </div>
                         <div class="col" id="plsql">
-                            <img
-                                src="https://img.icons8.com/plasticine/100/000000/oracle-pl-sql--v3.png" /></div>
+                            <img src="https://img.icons8.com/plasticine/100/000000/oracle-pl-sql--v3.png" />
+                        </div>
                         <div class="col" id="html">
-                            <i class="fab fa-html5 fa-5x" style="color: #e34c26;"></i></div>
+                            <i class="fab fa-html5 fa-5x" style="color: #e34c26;"></i>
+                        </div>
                         <div class="col" id="css">
                             <i class="fab fa-css3-alt fa-5x" style="color: #264de4;"></i>
                         </div>
                         <div class="col" id="react">
-                            <i class="fab fa-react fa-5x" style="color: blue"></i></div>
+                            <i class="fab fa-react fa-5x" style="color: blue"></i>
+                        </div>
                         <div class="col" id='next'>
-                            <img src="/assets/next-js.svg" alt=""></div>
+                            <img src="/assets/next-js.svg" alt="">
+                        </div>
                         <div class="col" id="node">
-                            <i class="fab fa-node fa-5x" style="color: #3c873a;"></i></div>
+                            <i class="fab fa-node fa-5x" style="color: #3c873a;"></i>
+                        </div>
                         <div class="col" id='postgresql'>
-                            <img src="/assets/postgresql.svg" alt=""></div>
+                            <img src="/assets/postgresql.svg" alt="">
+                        </div>
                         <div class="col" id='mysql'>
-                            <img src="/assets/sql.svg" alt="sql"></div>
+                            <img src="/assets/sql.svg" alt="sql">
+                        </div>
                         <div class="col" id='git'>
-                            <img src="/assets/git.svg" alt=""></div>
+                            <img src="/assets/git.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
