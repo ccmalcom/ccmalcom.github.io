@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#F7344F">
+    <meta name="theme-color" id="theme-color" content="#F7344F">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Recursive:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -13,11 +13,13 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" id="themeStylesheet" href="light-mode.css">
     <script>
-        (function () {
-            var currentScheme = localStorage.getItem('colorScheme') || 'light';
-            var themeStylesheet = document.getElementById('themeStylesheet');
+        (()=> {
+            let currentScheme = localStorage.getItem('colorScheme') || 'light';
+            let themeStylesheet = document.getElementById('themeStylesheet');
+            let themeColor = document.getElementById('theme-color');
             if (currentScheme === 'dark') {
                 themeStylesheet.href = 'dark-mode.css';
+                themeColor.content = '#BB6B6B';
             }
         })();
     </script>

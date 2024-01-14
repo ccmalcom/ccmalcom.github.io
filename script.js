@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const moons = document.querySelectorAll('.moon')
     const buttons = document.querySelectorAll('.modeContainer')
     const themeStylesheet = document.getElementById('themeStylesheet');
+    let themeColor = document.getElementById('theme-color');
     let isDarkMode = localStorage.getItem('colorScheme') === 'dark' ||
         (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
     suns.forEach(sun => sun.classList.toggle('visible', !isDarkMode));
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             moons.forEach(moon => moon.classList.toggle('visible'));
             // darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
             themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
+            themeColor.content = isDarkMode ? '#BB6B6B' : '#F7344F';
             localStorage.setItem('colorScheme', isDarkMode ? 'dark' : 'light');
         });
     })
