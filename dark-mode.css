@@ -5,7 +5,7 @@
 }
 
 .string-highlight {
-	color: #D1C547;
+	color: #D1B347;
 }
 
 #typewriter{
@@ -40,7 +40,9 @@ html {
 	background-color: #121212;
 }
 
-
+body{
+	color: #121212;
+}
 body h1 {
 	font-family: 'Recursive', sans-serif;
 	;
@@ -63,23 +65,6 @@ header {
 	display: flex;
 }
 
-#darkModeToggleContainer {
-    /* Add styles here to match your console's appearance */
-    color: white; /* Example style */
-    cursor: pointer; /* Make it clear the text is clickable */
-}
-
-#darkModeToggleContainer #darkModeStatus {
-    /* Style the status indicator */
-    display: inline-block;
-    width: 80px; /* Adjust as needed */
-    text-align: center;
-    margin-left: 10px;
-    /* Additional styling */
-	background-color: transparent;
-	border: 1px solid #F1E6D3;
-}
-
 .modeContainer {
 	width: 46px;
 	height: 46px;
@@ -91,7 +76,9 @@ header {
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	margin-left: 25px;
   }
+  
   
   .sun {
 	width: 50%;
@@ -101,9 +88,10 @@ header {
 	opacity: 0;
 	transform: scale(0.6) rotate(0deg);
 	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
+	border: black 1px solid;
 	
   /*  white transparent for Safari  */
-	background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, #f0f0f0 50%);
+	background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, white 50%);
   }
   
   .sun:before {
@@ -112,7 +100,7 @@ header {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: radial-gradient(circle, #f0f0f0 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, #f0f0f0 50%);
+	background: radial-gradient(circle, #121212 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, white 50%);
 	transform: rotate(45deg);
   }
   
@@ -132,7 +120,7 @@ header {
 	top: 18.75%;
 	background-color: rgba(0, 0, 0, 0);
 	border-radius: 50%;
-	box-shadow: 9px 3px 0px 0px #f0f0f0;
+	box-shadow: 9px 3px 0px 0px #121212;
 	opacity: 0;
 	transform: scale(0.3) rotate(65deg);
 	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
@@ -153,7 +141,7 @@ header {
 	width: 0px;
 	height: 0px;
 	border-right: 7px solid rgba(0, 0, 0, 0);
-	border-bottom: 5px solid #f0f0f0;
+	border-bottom: 5px solid #D1B347;
 	border-left: 7px solid rgba(0, 0, 0, 0);
 	transform: scale(0.55) rotate(35deg);  
 	opacity: 0;
@@ -161,7 +149,7 @@ header {
   }
   
   .star:before {
-	border-bottom: 5px solid #f0f0f0;
+	border-bottom: 5px solid #D1B347;
 	border-left: 3px solid rgba(0, 0, 0, 0);
 	border-right: 3px solid rgba(0, 0, 0, 0);
 	position: absolute;
@@ -183,7 +171,7 @@ header {
 	width: 0px;
 	height: 0px;
 	border-right: 7px solid rgba(0, 0, 0, 0);
-	border-bottom: 5px solid #f0f0f0;
+	border-bottom: 5px solid #D1B347;
 	border-left: 7px solid rgba(0, 0, 0, 0);
 	transform: rotate(-70deg);
 	content: '';
@@ -255,7 +243,7 @@ nav img {
 }
 
 .nav-link:hover {
-	color: #D1C547;
+	color: #D1B347;
 	transition: 200ms;
 }
 
@@ -264,7 +252,7 @@ nav img {
 }
 
 .nav-link i {
-	color: #D1C547;
+	color: #D1B347;
 }
 
 .nav-link i:hover {
@@ -273,11 +261,11 @@ nav img {
 }
 
 #contactLink {
-	border: 1px solid #D1C547
+	border: 1px solid #D1B347
 }
 
 #contactLink:hover {
-	background-color: #D1C547;
+	background-color: #D1B347;
 	color: #BB6B6B;
 	transition: 200ms;
 }
@@ -309,7 +297,7 @@ nav .container {
 }
 
 #contactAnchor i {
-	color: #D1C547;
+	color: #D1B347;
 }
 
 #contactButton {
@@ -327,7 +315,7 @@ nav .container {
 
 .dropdown-toggle {
 	color: #BB6B6B !important;
-	background-color: #D1C547 !important;
+	background-color: #D1B347 !important;
 	border: none;
 }
 
@@ -338,7 +326,7 @@ nav .container {
 .dropdown-menu {
 	min-width: fit-content;
 	font-family: 'Poppins';
-	background-color: #D1C547;
+	background-color: #D1B347;
 }
 
 @media screen and (max-width: 900px) {
@@ -398,7 +386,7 @@ nav .container {
 	width: fit-content;
 	font-size: calc(40px + 2vw);
 	/* border-bottom: 3px solid #BB6B6B; */
-	text-shadow: 5px 5px 3px #D1C547;
+	text-shadow: 5px 5px 3px #D1B347;
 	transition: .5s ease-out;
 }
 
@@ -679,8 +667,8 @@ nav .container {
 	margin-bottom: 5%;
 	color: #BB6B6B;
 	width: fit-content;
-	border-bottom: 5px solid #D1C547;
-	border-right: 5px solid #D1C547;
+	border-bottom: 5px solid #D1B347;
+	border-right: 5px solid #D1B347;
 	padding-bottom: 12px;
 	padding-right: 17px;
 	font-size: calc(40px + 2vw);
@@ -779,7 +767,7 @@ nav .container {
 .flip-card button {
 	border: none;
 	border-radius: 20px;
-	background-color: #D1C547;
+	background-color: #D1B347;
 	color: rgb(50, 50, 50);
 	font-size: 1vw;
 	height: 2.5vw;
@@ -830,7 +818,7 @@ nav .container {
 }
 
 #contact h1 {
-	color: #D1C547;
+	color: #D1B347;
 	font-size: calc(40px + 2vw);
 }
 
@@ -859,7 +847,7 @@ nav .container {
 #form {
 	border: 15px solid black;
 	background-color: black;
-	box-shadow: #D1C547 40px 40px;
+	box-shadow: #D1B347 40px 40px;
 	margin-bottom: 4%;
 }
 
