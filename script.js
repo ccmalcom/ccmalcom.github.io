@@ -82,40 +82,26 @@ typewriter.type();
 // darkmode toggle 
 document.addEventListener('DOMContentLoaded', function () {
 
-
-    // const darkModeToggleContainer = document.getElementById('darkModeStatus');
-    // const darkModeStatus = document.getElementById('darkModeStatus');
-    // const themeStylesheet = document.getElementById('themeStylesheet');
-    // let isDarkMode = localStorage.getItem('colorScheme') === 'dark' || 
-    // (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    // // Set the initial state
-    // darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
-    // themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
-
-
-    // darkModeStatus.addEventListener('click', function () {
-    //     isDarkMode = !isDarkMode; // Toggle the boolean value
-    //     darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
-    //     themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
-    //     localStorage.setItem('colorScheme', isDarkMode ? 'dark' : 'light');
-    // });
-    const sun = document.querySelector('.sun')
-    const moon = document.querySelector('.moon')
-    const button = document.querySelector('.modeContainer')
+    const suns = document.querySelectorAll('.sun')
+    const moons = document.querySelectorAll('.moon')
+    const buttons = document.querySelectorAll('.modeContainer')
     const themeStylesheet = document.getElementById('themeStylesheet');
-    let isDarkMode = localStorage.getItem('colorScheme') === 'dark' || 
-    (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);    
-    sun.classList.toggle('visible', !isDarkMode);
-    moon.classList.toggle('visible', isDarkMode);
+    let isDarkMode = localStorage.getItem('colorScheme') === 'dark' ||
+        (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    suns.forEach(sun => sun.classList.toggle('visible', !isDarkMode));
+    moons.forEach(moon => moon.classList.toggle('visible', isDarkMode));
+
     themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
-    
-    button.addEventListener('click', () => {
-        isDarkMode = !isDarkMode; // Toggle the boolean value
-        sun.classList.toggle('visible')
-        moon.classList.toggle('visible')
-        // darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
-        themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
-        localStorage.setItem('colorScheme', isDarkMode ? 'dark' : 'light');
-});
+    buttons.forEach(button => {
+
+        button.addEventListener('click', () => {
+            isDarkMode = !isDarkMode; // Toggle the boolean value
+            suns.forEach(sun => sun.classList.toggle('visible'));
+            moons.forEach(moon => moon.classList.toggle('visible'));
+            // darkModeStatus.textContent = isDarkMode ? 'enabled' : 'disabled';
+            themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
+            localStorage.setItem('colorScheme', isDarkMode ? 'dark' : 'light');
+        });
+    })
 
 })
