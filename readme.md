@@ -1,3 +1,5 @@
+Hey! Welcome to the code side of my portfolio website. I am working on a few updates to the site and an eventual copmlete overhaul/recode. 
+
 resources:
 Copyright (c) 2024 by jgarrow (https://codepen.io/jgarrow/pen/JjKaMVy)
 
