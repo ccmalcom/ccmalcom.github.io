@@ -11,7 +11,17 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" id="themeStylesheet" href="light-mode.css">
+    <script>
+        (function() {
+            var currentScheme = localStorage.getItem('colorScheme') || 'light';
+            var themeStylesheet = document.getElementById('themeStylesheet');
+            if (currentScheme === 'dark') {
+                themeStylesheet.href = 'dark-mode.css';
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Chase Malcom</title>
 </head>
@@ -23,11 +33,15 @@
     <!-- navbar -->
     <nav class="navbar sticky-top navbar-dark bg-color nav justify-content-end">
         <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="assets/web-logo.png" alt="" class="d-inline-block align-text-top">
+            <a href="#" class="navbar-brand" id="logo-link">
+                <img src="assets/web-logo.png" alt="" class="d-inline-block align-text-top" id="logo">
                 CCMedia
             </a>
         </div>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>        
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link" href="#header"><i class="fas fa-lg fa-angle-double-up"></i></a>

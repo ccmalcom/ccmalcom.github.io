@@ -71,8 +71,22 @@ typewriter.type();
 
 //* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea
 
-// const card = document.querySelector('.card__inner');
+// darkmode toggle 
+document.addEventListener('DOMContentLoaded', function () {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const themeStylesheet = document.getElementById('themeStylesheet');
+    const currentScheme = localStorage.getItem('colorScheme') || 'light';
 
-// card.addEventListener('click', function(){
-//     card.classList.toggle('is-flipped');
-// })
+        darkModeToggle.checked = (currentScheme === 'dark');
+    
+
+    darkModeToggle.addEventListener('change', function(event) {
+        if (event.target.checked) {
+            themeStylesheet.href = '/dark-mode.css';
+            localStorage.setItem('colorScheme', 'dark');
+        } else {
+            themeStylesheet.href = '/light-mode.css';
+            localStorage.setItem('colorScheme', 'light');
+        }
+    });
+});

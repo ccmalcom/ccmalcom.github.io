@@ -1,11 +1,11 @@
 /* Typewriter Effect */
 
 .var-highlight {
-	color: #F7344F;
+	color: #BB6B6B;
 }
 
 .string-highlight {
-	color: #E6FF00;
+	color: #D1C547;
 }
 
 #typewriter{
@@ -13,7 +13,7 @@
 		top: 20%;
 		font-size:calc(12px + 1.5vw);
 		font-family: "Courier New";
-        color: white;
+        color: #FCF2E3;
 	min-height: 40vh;
 	overflow-x: hidden;
 }
@@ -37,11 +37,9 @@
 html {
 	font-family: 'poppins', sans-serif;
 	overflow-x: hidden;
+	background-color: #121212;
 }
 
-body {
-	background-color: white;
-}
 
 body h1 {
 	font-family: 'Recursive', sans-serif;
@@ -51,6 +49,11 @@ body h1 {
 }
 
 /* NAV/HEADER */
+
+#logo-link {
+	color:#121212
+}
+
 
 header {
 	height: 40vw;
@@ -77,7 +80,7 @@ header {
 }
 
 .bg-color {
-	background-color: #F7344F;
+	background-color: #BB6B6B;
 }
 
 nav img {
@@ -93,43 +96,43 @@ nav img {
 }
 
 .navbar-brand {
-	color: white;
+	color: #121212;
 	font-family: 'poppins', sans-serif;
 	font-weight: 700;
 	letter-spacing: 2px;
 }
 
 .nav-link {
-	color: white;
+	color: #121212;
 	font-family: 'poppins', sans-serif;
 	letter-spacing: 2px;
 }
 
 .nav-link:hover {
-	color: #E6FF00;
+	color: #D1C547;
 	transition: 200ms;
 }
 
-.nav-link:visited {
-	color: white;
+.nav-link:current {
+	color: #121212;
 }
 
 .nav-link i {
-	color: #E6FF00;
+	color: #D1C547;
 }
 
 .nav-link i:hover {
-	color: white;
+	color: #121212;
 	transition: 200ms;
 }
 
 #contactLink {
-	border: 1px solid #E6FF00
+	border: 1px solid #D1C547
 }
 
 #contactLink:hover {
-	background-color: #E6FF00;
-	color: #F7344F;
+	background-color: #D1C547;
+	color: #BB6B6B;
 	transition: 200ms;
 }
 
@@ -160,7 +163,7 @@ nav .container {
 }
 
 #contactAnchor i {
-	color: #E6FF00;
+	color: #D1C547;
 }
 
 #contactButton {
@@ -168,17 +171,17 @@ nav .container {
 	width: 80px;
 	border: none;
 	border-radius: 50%;
-	background-color: #F7344F;
+	background-color: #BB6B6B;
 }
 
 .dropdown {
 	display: none;
-	color: #F7344F;
+	color: #BB6B6B;
 }
 
 .dropdown-toggle {
-	color: #F7344F !important;
-	background-color: #E6FF00 !important;
+	color: #BB6B6B !important;
+	background-color: #D1C547 !important;
 	border: none;
 }
 
@@ -189,6 +192,7 @@ nav .container {
 .dropdown-menu {
 	min-width: fit-content;
 	font-family: 'Poppins';
+	background-color: #D1C547;
 }
 
 @media screen and (max-width: 900px) {
@@ -234,26 +238,29 @@ nav .container {
 	padding: 5% 0;
 	font-family: 'poppins', sans-serif;
 	display: block;
+	background-color: #121212;
+	/* transition: .5s ease-out; */
+
 }
 
 #aboutMe h1 {
 	text-align: center;
-	color: black;
+	color: #FCF2E3;
 	margin: 0 auto 3% auto;
 	width: fit-content;
 	font-size: calc(40px + 2vw);
-	/* border-bottom: 3px solid #F7344F; */
-	text-shadow: 5px 5px 3px #E6FF00;
+	/* border-bottom: 3px solid #BB6B6B; */
+	text-shadow: 5px 5px 3px #D1C547;
 	transition: .5s ease-out;
 }
 
 #aboutMe h3 {
 	text-align: center;
-	color: black;
+	color: #FCF2E3;
 	margin: auto;
 	font-size: calc(16px + 1vw);
 	width: fit-content;
-	/* border-bottom: 3px solid #F7344F; */
+	/* border-bottom: 3px solid #BB6B6B; */
 	transition: .5s ease-out;
 }
 
@@ -310,6 +317,7 @@ nav .container {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	color: #FCF2E3;
 }
 
 #aboutImg, #aboutTxt, #skills, #certifications{
@@ -360,7 +368,7 @@ nav .container {
 }
 
 #nameFlair{
-	color: #F7344F;
+	color: #BB6B6B;
 	font-size: 1.2rem;
 	font-weight: 600;
 }
@@ -406,7 +414,7 @@ nav .container {
 	width: 33.3vw;
 	text-align:  center;
 	letter-spacing: 1px;
-	color: black;
+	color: #FCF2E3;
 	font-weight: 500;
 	line-height: 170%;
 	
@@ -422,11 +430,11 @@ nav .container {
 }
 
 #externalLinks .fab, #externalLinks .fas {
-	color: #F7344F;
+	color: #BB6B6B;
 }
 
 #externalLinks .fab:hover, #externalLinks .fas:hover {
-	color: black;
+	color: #F1E6D3;
 	transition: 200ms;
 }
 
@@ -521,10 +529,10 @@ nav .container {
 
 #projects h1 {
 	margin-bottom: 5%;
-	color: #F7344F;
+	color: #BB6B6B;
 	width: fit-content;
-	border-bottom: 5px solid #E6FF00;
-	border-right: 5px solid #E6FF00;
+	border-bottom: 5px solid #D1C547;
+	border-right: 5px solid #D1C547;
 	padding-bottom: 12px;
 	padding-right: 17px;
 	font-size: calc(40px + 2vw);
@@ -592,7 +600,7 @@ nav .container {
 }
 
 .flip-card-front {
-	color: white;
+	color: #FCF2E3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -604,7 +612,7 @@ nav .container {
 
 .flip-card-back {
 	background-color: rgb(50, 50, 50);
-	color: white;
+	color: #FCF2E3;
 	transform: rotateY(180deg);
 	display: flex;
 	flex-direction: column;
@@ -623,7 +631,7 @@ nav .container {
 .flip-card button {
 	border: none;
 	border-radius: 20px;
-	background-color: #E6FF00;
+	background-color: #D1C547;
 	color: rgb(50, 50, 50);
 	font-size: 1vw;
 	height: 2.5vw;
@@ -631,7 +639,7 @@ nav .container {
 }
 
 .flip-card button:hover {
-	/* background-color: white; */
+	/* background-color: #FCF2E3; */
 	color: rgb(50, 50, 50);
 	transform: scale(1.1);
 	transition: .5s;
@@ -661,7 +669,7 @@ nav .container {
 /* CONTACT */
 
 #contact {
-	background-color: #F7344F;
+	background-color: #BB6B6B;
 	width: 70vw;
 	height: auto;
 	width: 100vw;
@@ -674,7 +682,7 @@ nav .container {
 }
 
 #contact h1 {
-	color: #E6FF00;
+	color: #D1C547;
 	font-size: calc(40px + 2vw);
 }
 
@@ -685,8 +693,8 @@ nav .container {
 
 #sendButton {
 	margin: 10px;
-	background-color: #F7344F;
-	color: white;
+	background-color: #BB6B6B;
+	color: #FCF2E3;
 	border: transparent;
 	width: 520px;
 	height: 50px;
@@ -696,20 +704,20 @@ nav .container {
 }
 
 #sendButton:hover {
-	border: 1px solid white;
+	border: 1px solid #FCF2E3;
 	transition: 200ms;
 }
 
 #form {
 	border: 15px solid black;
 	background-color: black;
-	box-shadow: #E6FF00 40px 40px;
+	box-shadow: #D1C547 40px 40px;
 	margin-bottom: 4%;
 }
 
 #contactHeadings p {
 	width: 80%;
-	color: white;
+	color: #FCF2E3;
 	letter-spacing: 1px;
 }
 
@@ -734,7 +742,7 @@ nav .container {
 
 #name, #email, #phoneNumber, #subject, #message {
 	margin: 10px;
-	border-color: white;
+	border-color: #FCF2E3;
 }
 
 #button {
@@ -818,7 +826,7 @@ nav .container {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	color: white;
+	color: #FCF2E3;
 	text-align: center;
 	width: 100vw;
 }
@@ -831,10 +839,10 @@ nav .container {
 }
 
 #footer .fab {
-	color: white;
+	color: #FCF2E3;
 }
 
 #footer .fab:hover {
-	color: #E6FF00;
+	color: #BB6B6B;
 	transition: 200ms;
 } 
