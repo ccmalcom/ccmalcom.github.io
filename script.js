@@ -1,3 +1,9 @@
+const themeStylesheet = document.getElementById('themeStylesheet');
+const themeColor = document.getElementById('theme-color');
+let isDarkMode = localStorage.getItem('colorScheme') === 'dark' ||
+    (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
+themeColor.content = isDarkMode ? '#BB6B6B' : '#F7344F';
 function setupTypewriter(t) {
     var HTML = t.innerHTML;
 
@@ -80,22 +86,17 @@ typewriter.type();
 //* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea
 
 // darkmode toggle 
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const suns = document.querySelectorAll('.sun')
     const moons = document.querySelectorAll('.moon')
     const buttons = document.querySelectorAll('.modeContainer')
-    const themeStylesheet = document.getElementById('themeStylesheet');
 
-    let themeColor = document.getElementById('theme-color');
-    let isDarkMode = localStorage.getItem('colorScheme') === 'dark' ||
-        (localStorage.getItem('colorScheme') === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
     suns.forEach(sun => sun.classList.toggle('visible', !isDarkMode));
     moons.forEach(moon => moon.classList.toggle('visible', isDarkMode));
 
-    themeStylesheet.href = isDarkMode ? '/dark-mode.css' : '/light-mode.css';
-    themeColor.content = isDarkMode ? '#BB6B6B' : '#F7344F';
     buttons.forEach(button => {
 
         button.addEventListener('click', () => {
