@@ -13,7 +13,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" id="themeStylesheet" href="light-mode.css">
     <script>
-        (()=> {
+        (() => {
             let currentScheme = localStorage.getItem('colorScheme') || 'light';
             let themeStylesheet = document.getElementById('themeStylesheet');
             let themeColor = document.getElementById('theme-color');
@@ -109,7 +109,15 @@
                 <h1>About Me</h1>
                 <h3>Full Stack Developer && Coffee Enthusiast</h3>
                 <div id='aboutImg'>
-                    <img src="assets/me.jpg" alt="">
+                    <!-- <img src="assets/me.jpg" alt="">
+                    -->
+                    <div id="sprite-container">
+                        <img id='anchor' src="/assets/sprite.PNG" alt="">
+                        <div id="eyes">
+                            <img class="eye" src="/assets/eye3.png" alt="" style="bottom:25px; left: 30px">
+                            <img class="eye" src="/assets/eye3.png" alt="" style="bottom:25px; right: 22px">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="middleContent">
