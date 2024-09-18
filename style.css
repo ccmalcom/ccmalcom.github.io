@@ -9,9 +9,9 @@ body {
 	color: white;
 }
 
-[data-theme="dark"] body {
+/* [data-theme="dark"] body {
 	color: #121212;
-}
+} */
 
 body h1 {
 	font-family: 'Recursive', sans-serif;
@@ -47,10 +47,6 @@ header {
 	position: relative;
 	margin-left: 25px;
 }
-
-/* Todo: move to external file */
-
-
 
 nav img {
 	width: calc(24px + 1vw);

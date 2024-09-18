@@ -11,7 +11,15 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" id="themeStylesheet" href="light-mode.css"> -->
+    <script>
+        const colorScheme = localStorage.getItem('colorScheme') ? localStorage.getItem('colorScheme') : null;
+        if (colorScheme) {
+            document.documentElement.setAttribute('data-theme', colorScheme);
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="typewriter.css">

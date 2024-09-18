@@ -27,13 +27,7 @@
 }
 
 [data-theme="dark"] #typewriter {
-    position: relative;
-    top: 20%;
-    font-size: calc(12px + 1.5vw);
-    font-family: "Courier New";
     color: #F1E6D3;
-    min-height: 40vh;
-    overflow-x: hidden;
 }
 
 #typewriter:after {
