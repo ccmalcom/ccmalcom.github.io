@@ -9,9 +9,6 @@ body {
 	color: white;
 }
 
-/* [data-theme="dark"] body {
-	color: #121212;
-} */
 
 body h1 {
 	font-family: 'Recursive', sans-serif;
@@ -268,7 +265,6 @@ nav .container {
 	margin: 0 auto 3% auto;
 	width: fit-content;
 	font-size: calc(40px + 2vw);
-	/* border-bottom: 3px solid #F7344F; */
 	text-shadow: 5px 5px 3px #E6FF00;
 	transition: .5s ease-out;
 }
@@ -284,7 +280,6 @@ nav .container {
 	margin: auto;
 	font-size: calc(16px + 1vw);
 	width: fit-content;
-	/* border-bottom: 3px solid #F7344F; */
 	transition: .5s ease-out;
 }
 
@@ -327,7 +322,6 @@ nav .container {
 	align-items: center;
 	width: 100%;
 	height: auto;
-	/* margin: 2% 2%; */
 }
 
 #bottomContent {
@@ -355,7 +349,6 @@ nav .container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
-	/* padding-left: 5%; */
 	width: 33.3vw;
 	justify-items: center;
 	align-items: center;
@@ -405,7 +398,6 @@ nav .container {
 
 #skills .col, #skills2 .col {
 	list-style: none;
-	/* padding: 50px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -508,8 +500,7 @@ nav .container {
 		height: 120px;
 		position: relative;
 		overflow: hidden;
-		/* display: flex;
-		justify-content: space-evenly; */
+
 	}
 
 	#skills, #skills2 {
@@ -536,7 +527,6 @@ nav .container {
 		max-height: 100px;
 		max-width: 100px;
 		display: inline-block;
-		/* margin-top: 30px; */
 		margin-left: 10px;
 		overflow: hidden;
 		text-align: center;
@@ -614,17 +604,14 @@ nav .container {
 
 .flip-card {
 	background-color: transparent;
-	/* min-width: 200px; */
 	width: 20vw;
 	height: 20vw;
-	/* border: 1px solid black; */
 	perspective: 1000px;
 	transition: .2s;
 }
 
 .flip-card-inner {
 	transition: all .5s ease-out;
-	/* transition-delay: .1s; */
 	transform-style: preserve-3d;
 	position: absolute;
 	width: 100%;
@@ -704,7 +691,6 @@ nav .container {
 }
 
 .flip-card button:hover {
-	/* background-color: white; */
 	color: rgb(50, 50, 50);
 	transform: scale(1.1);
 	transition: .5s;
@@ -867,7 +853,6 @@ nav .container {
 		margin-left: auto;
 		margin-right: auto;
 		font-weight: 500;
-		/* font-size: 20px; */
 		letter-spacing: 1px;
 	}
 
@@ -896,7 +881,6 @@ nav .container {
 		margin-left: auto;
 		margin-right: auto;
 		font-weight: 500;
-		/* font-size: 20px; */
 		letter-spacing: 1px;
 	}
 
