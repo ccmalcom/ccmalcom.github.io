@@ -51,4 +51,21 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    #typewriter {
+        font-size: calc(10px + 1vw);
+    }
+
+    header {
+        min-height: 30vh;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #typewriter {
+        font-size: calc(8px + 1vw);
+    }
+}
+
 /* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea */
