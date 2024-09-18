@@ -1,48 +1,13 @@
-/* Typewriter Effect */
-
-.var-highlight {
-	color: #BB6B6B;
-}
-
-.string-highlight {
-	color: #D1B347;
-}
-
-#typewriter{
-		position: relative;
-		top: 20%;
-		font-size:calc(12px + 1.5vw);
-		font-family: "Courier New";
-        color: #F1E6D3;
-	min-height: 40vh;
-	overflow-x: hidden;
-}
-
-#typewriter:after {
-	content: "|";
-	animation: blink 500ms linear infinite alternate;
-}
-
-@keyframes blink {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-/* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea */
-
 html {
 	font-family: 'poppins', sans-serif;
 	overflow-x: hidden;
 	background-color: #121212;
 }
 
-body{
+body {
 	color: #121212;
 }
+
 body h1 {
 	font-family: 'Recursive', sans-serif;
 	;
@@ -53,7 +18,7 @@ body h1 {
 /* NAV/HEADER */
 
 #logo-link {
-	color:#121212
+	color: #121212
 }
 
 
@@ -77,140 +42,6 @@ header {
 	align-items: center;
 	position: relative;
 	margin-left: 25px;
-  }
-  
-  
-  .sun {
-	width: 50%;
-	height: 50%;
-	position: absolute;
-	pointer-events: none;
-	opacity: 0;
-	transform: scale(0.6) rotate(0deg);
-	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-	border: black 1px solid;
-	
-  /*  white transparent for Safari  */
-	background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, white 50%);
-  }
-  
-  .sun:before {
-	content: "";
-	position: absolute;
-	display: block;
-	width: 100%;
-	height: 100%;
-	background: radial-gradient(circle, #121212 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, white 50%);
-	transform: rotate(45deg);
-  }
-  
-  .sun.visible {
-	pointer-events: auto;
-	opacity: 1;
-	transform: scale(1) rotate(180deg);
-	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-  }
-	  
-  .moon {
-	width: 50%;
-	height: 50%;
-	pointer-events: none;
-	position: absolute;
-	left: 12.5%;
-	top: 18.75%;
-	background-color: rgba(0, 0, 0, 0);
-	border-radius: 50%;
-	box-shadow: 9px 3px 0px 0px #121212;
-	opacity: 0;
-	transform: scale(0.3) rotate(65deg);
-	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-  }
-  
-  .moon.visible {
-	pointer-events: auto;
-	opacity: 1;
-	transform: scale(1) rotate(0deg);
-	transition: transform 0.3s ease-in, opacity 0.2s ease-in 0.1s;
-  }
-  
-  .star {
-	position: absolute;
-	top: 25%;
-	left: 5%;
-	display: block;
-	width: 0px;
-	height: 0px;
-	border-right: 7px solid rgba(0, 0, 0, 0);
-	border-bottom: 5px solid #D1B347;
-	border-left: 7px solid rgba(0, 0, 0, 0);
-	transform: scale(0.55) rotate(35deg);  
-	opacity: 0;
-	transition: all 0.2s ease-in 0.4s;
-  }
-  
-  .star:before {
-	border-bottom: 5px solid #D1B347;
-	border-left: 3px solid rgba(0, 0, 0, 0);
-	border-right: 3px solid rgba(0, 0, 0, 0);
-	position: absolute;
-	height: 0;
-	width: 0;
-	top: -3px;
-	left: -5px;
-	display: block;
-	content: '';
-	transform: rotate(-35deg);
-  }
-  
-  .star:after {
-	position: absolute;
-	display: block;
-	color: red;
-	top: 0px;
-	left: -7px;
-	width: 0px;
-	height: 0px;
-	border-right: 7px solid rgba(0, 0, 0, 0);
-	border-bottom: 5px solid #D1B347;
-	border-left: 7px solid rgba(0, 0, 0, 0);
-	transform: rotate(-70deg);
-	content: '';
-  }
-  
-  .moon.visible .star {
-	opacity: .8;
-  /*   transform: rotate(35deg); */
-  }
-  
-  .star.small {
-	transform: scale(0.35) rotate(35deg);
-	position: relative;
-	top: 50%;
-	left: 37.5%;
-	opacity: 0;
-	transition: all 0.2s ease-in 0.45s;
-  }
-  
-  .moon.visible .star.small {
-	opacity: .7;
-	transform: scale(0.45) rotate(35deg);
-  }
-
-
-@media screen and (max-width: 600px) {
-	#typewriter {
-		font-size: calc(10px + 1vw);
-	}
-	header {
-		min-height: 30vh;
-		transition: 1s;
-	}
-}
-
-@media screen and (max-width: 376px) {
-	#typewriter {
-		font-size: calc(8px + 1vw);
-	}
 }
 
 .bg-color {
@@ -332,13 +163,13 @@ nav .container {
 @media screen and (max-width: 900px) {
 	#contactAnchor {
 		position: fixed;
-	z-index: 1000;
-	top: 88vh;
-	left: 82%;
-	border: none;
-	border-radius: 50%;
-	transition: .2s ease-out;
-	visibility: visible;
+		z-index: 1000;
+		top: 88vh;
+		left: 82%;
+		border: none;
+		border-radius: 50%;
+		transition: .2s ease-out;
+		visibility: visible;
 	}
 }
 
@@ -346,6 +177,7 @@ nav .container {
 	.nav ul {
 		display: none;
 	}
+
 	.dropdown {
 		display: flex;
 	}
@@ -358,7 +190,7 @@ nav .container {
 }
 
 @media screen and (max-width: 467px) {
-	#contactAnchor{
+	#contactAnchor {
 		left: 78%
 	}
 }
@@ -456,7 +288,7 @@ nav .container {
 	color: #F1E6D3;
 }
 
-#aboutImg, #aboutTxt, #skills, #certifications{
+#aboutImg, #aboutTxt, #skills, #certifications {
 	width: 33.3%;
 	margin: auto;
 }
@@ -472,7 +304,7 @@ nav .container {
 	box-sizing: content-box;
 	margin: auto;
 } */
-#certifications{
+#certifications {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
@@ -484,30 +316,32 @@ nav .container {
 	padding: 7%;
 
 }
-#certifications img{
+
+#certifications img {
 	height: 100px;
 	width: 100px;
 	display: flex;
 	justify-content: center;
 }
 
-#certifications a{
+#certifications a {
 	transition: 0.25s ease-out;
 
 }
 
-#certifications a:hover{
+#certifications a:hover {
 	transform: scale(1.5);
 	transition: .25s ease;
 	text-align: center;
 	visibility: visible;
 }
 
-#nameFlair{
+#nameFlair {
 	color: #BB6B6B;
 	font-size: 1.2rem;
 	font-weight: 600;
 }
+
 #skills {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -518,7 +352,7 @@ nav .container {
 }
 
 
-#skills .col, #skills2 .col{
+#skills .col, #skills2 .col {
 	list-style: none;
 	/* padding: 50px; */
 	display: flex;
@@ -526,14 +360,15 @@ nav .container {
 	align-items: center;
 	transition: 0.25s ease-out;
 }
-#skills .col:hover, #skills2.col:hover{
+
+#skills .col:hover, #skills2.col:hover {
 	transform: scale(1.5);
 	transition: .25s ease;
 	text-align: center;
 	visibility: visible;
 }
 
-#skills .col p:hover, #skills2.col p:hover{
+#skills .col p:hover, #skills2.col p:hover {
 	visibility: visible;
 }
 
@@ -548,12 +383,12 @@ nav .container {
 	/* overflow-y: auto; */
 	min-height: fit-content;
 	width: 33.3vw;
-	text-align:  center;
+	text-align: center;
 	letter-spacing: 1px;
 	color: #F1E6D3;
 	font-weight: 500;
 	line-height: 170%;
-	
+
 }
 
 
@@ -582,25 +417,32 @@ nav .container {
 	#pcView {
 		display: none;
 	}
+
 	#mobileView {
 		display: block;
 	}
-	#externalLinks{
+
+	#externalLinks {
 		width: 60%;
 	}
+
 	#middleContent {
 		flex-direction: column;
 		margin: 2% 0;
 	}
+
 	#aboutMe img {
 		max-width: 400px;
 	}
+
 	#aboutTxt {
 		width: 80vw;
 	}
+
 	#aboutMe p {
 		font-size: calc(10px + 1vw);
 	}
+
 	#skillsList {
 		width: 100%;
 		height: 120px;
@@ -609,6 +451,7 @@ nav .container {
 		/* display: flex;
 		justify-content: space-evenly; */
 	}
+
 	#skills, #skills2 {
 		width: 2640px;
 		position: absolute;
@@ -624,9 +467,11 @@ nav .container {
 		-webkit-animation-iteration-count: infinite;
 		animation-iteration-count: infinite;
 	}
-	#skills2{
+
+	#skills2 {
 		left: 1120px;
 	}
+
 	#skills .col, #skills2 .col {
 		max-height: 100px;
 		max-width: 100px;
@@ -636,18 +481,22 @@ nav .container {
 		overflow: hidden;
 		text-align: center;
 	}
+
 	@-webkit-keyframes pan {
 		0% {
 			transform: translateX(0);
 		}
+
 		100% {
 			transform: translateX(-1100px);
 		}
 	}
+
 	@keyframes pan {
 		0% {
 			transform: translateX(0);
 		}
+
 		100% {
 			transform: translateX(-1100px);
 		}
@@ -785,16 +634,20 @@ nav .container {
 	.first-row, .second-row {
 		flex-direction: column;
 	}
+
 	.flip-card {
 		width: 50vw;
 		height: 50vw;
 	}
+
 	.flip-card-back h3 {
 		font-size: 3vw;
 	}
+
 	.flip-card-back p {
 		font-size: 2.5vw;
 	}
+
 	.flip-card button {
 		font-size: 2.5vw;
 		height: 5vw;
@@ -893,9 +746,11 @@ nav .container {
 		height: fit-content;
 		padding-bottom: 10%;
 	}
+
 	#contactHeadings {
 		text-align: center;
 	}
+
 	#contactHeadings p {
 		text-align: center;
 		margin-left: auto;
@@ -904,6 +759,7 @@ nav .container {
 		/* font-size: 20px; */
 		letter-spacing: 1px;
 	}
+
 	#form {
 		margin-right: 5%;
 	}
@@ -919,9 +775,11 @@ nav .container {
 		padding-right: 0;
 		margin: auto;
 	}
+
 	#contactHeadings {
 		text-align: center;
 	}
+
 	#contactHeadings p {
 		text-align: center;
 		margin-left: auto;
@@ -930,17 +788,21 @@ nav .container {
 		/* font-size: 20px; */
 		letter-spacing: 1px;
 	}
+
 	#leftRightForm {
 		display: flex;
 		flex-direction: column;
 	}
+
 	#message {
 		max-height: 50px;
 		max-width: 250px;
 	}
+
 	#sendButton {
 		width: 250px;
 	}
+
 	#form {
 		margin-right: 5%;
 		margin-bottom: 5%;
@@ -981,4 +843,4 @@ nav .container {
 #footer .fab:hover {
 	color: #BB6B6B;
 	transition: 200ms;
-} 
+}

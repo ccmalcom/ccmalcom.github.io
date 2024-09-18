@@ -1,0 +1,54 @@
+/* Typewriter Effect */
+
+.var-highlight {
+    color: #F7344F;
+}
+
+.string-highlight {
+    color: #E6FF00;
+}
+
+#typewriter {
+    position: relative;
+    top: 20%;
+    font-size: calc(12px + 1.5vw);
+    font-family: "Courier New";
+    color: white;
+    min-height: 40vh;
+    overflow-x: hidden;
+}
+
+[data-theme="dark"] .var-highlight {
+    color: #BB6B6B;
+}
+
+[data-theme="dark"] .string-highlight {
+    color: #D1B347;
+}
+
+[data-theme="dark"] #typewriter {
+    position: relative;
+    top: 20%;
+    font-size: calc(12px + 1.5vw);
+    font-family: "Courier New";
+    color: #F1E6D3;
+    min-height: 40vh;
+    overflow-x: hidden;
+}
+
+#typewriter:after {
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Thank you https://codepen.io/stevn/pen/jEZvXa for the idea */
